@@ -2,7 +2,7 @@
   <artifact type="jar" name="SQLDemo">
     <output-path>$PROJECT_DIR$/out/artifacts/SQLDemo</output-path>
     <root id="archive" name="SQLDemo.jar">
-      <element id="module-output" name="HelloSpark" />
+      <element id="module-output" name="MySpark" />
     </root>
   </artifact>
 </component>

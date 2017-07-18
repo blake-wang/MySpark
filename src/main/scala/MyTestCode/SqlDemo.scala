@@ -20,6 +20,7 @@ object SqlDemo {
     personDF.registerTempTable("person")
     val df = sqlContext.sql("select * from person where age >= 28 order by age desc limit 2")
     df.show()
+    //我只想说，我就是添加了一个注释而已
     sc.stop()
   }
 }
