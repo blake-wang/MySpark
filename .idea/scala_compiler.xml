@@ -8,5 +8,12 @@
         <parameter value="F:\IdeaProjects\HelloSpark\target/.scala_dependencies" />
       </parameters>
     </profile>
+    <profile name="Maven 2" modules="MySpark">
+      <parameters>
+        <parameter value="-make:transitive" />
+        <parameter value="-dependencyfile" />
+        <parameter value="D:\悟空\项目代码\MySpark\target/.scala_dependencies" />
+      </parameters>
+    </profile>
   </component>
 </project>

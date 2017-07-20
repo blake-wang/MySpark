@@ -1,6 +1,6 @@
 package MyTestCode
 
-import scala.collection.mutable.ArrayBuffer
+
 
 /**
   * Created by wanglei on 2017/7/18.
@@ -26,23 +26,23 @@ object ArrayDemo {
     //---------------------------------
     //变长数组(数组缓冲)
     //如果想使用数组缓冲，需要导入 import scala.collection.mutable:ArrayBuffer包
-    val ab = ArrayBuffer[Int]()
-    //向数组缓冲的尾部追加一个元素
-    //+=尾部追加元素
-    ab += 1
-    //追加多个元素
-    ab += (2, 3, 4, 5)
-    println(ab)
-    ab.+=(2,3,4)
-    println(ab)
-    ab.+=(10,12,11)
-    //追加一个数组
-    ab ++= Array(6,7)
-    println(ab)
-    //追加一个数组缓冲
-    ab ++=ArrayBuffer(8,9)
-    //打印数组缓冲ab
-    println(ab)
+//    val ab = ArrayBuffer[Int]()
+//    //向数组缓冲的尾部追加一个元素
+//    //+=尾部追加元素
+//    ab += 1
+//    //追加多个元素
+//    ab += (2, 3, 4, 5)
+//    println(ab)
+//    ab.+=(2,3,4)
+//    println(ab)
+//    ab.+=(10,12,11)
+//    //追加一个数组
+//    ab ++= Array(6,7)
+//    println(ab)
+//    //追加一个数组缓冲
+//    ab ++=ArrayBuffer(8,9)
+//    //打印数组缓冲ab
+//    println(ab)
 
   }
 
