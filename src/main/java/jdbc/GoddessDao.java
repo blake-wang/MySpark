@@ -41,14 +41,35 @@ public class GoddessDao {
         PreparedStatement ptmt = conn.prepareStatement(sql);
         //传参
         ptmt.setString(1, g.getUser_name());
-        ptmt.setInt(1, g.getSex());
-        ptmt.setInt(1, g.getAge());
-        ptmt.setDate(1, new Date(g.getBirthday().getTime()));
-        ptmt.setString(1, g.getEmail());
-        ptmt.setString(1, g.getMobile());
-        ptmt.setString(1, g.getUpdate_user());
-        ptmt.setInt(1, g.getIsDel());
-        ptmt.setInt(1, g.getId());
+        ptmt.setInt(2, g.getSex());
+        ptmt.setInt(3, g.getAge());
+        ptmt.setDate(4, new Date(g.getBirthday().getTime()));
+        ptmt.setString(5, g.getEmail());
+        ptmt.setString(6, g.getMobile());
+        ptmt.setString(7, g.getUpdate_user());
+        ptmt.setInt(8, g.getIsDel());
+        ptmt.setInt(9, g.getId());
+
+        //执行
+        ptmt.execute();
+    }
+    //更新
+    public void updateGoddess() throws SQLException {
+        //获取连接
+        Connection conn = DbUtil.getConnection();
+        String sql = "update imooc_goddess set user_name=?,sex=?,age=?,birthday=?,email=?,mobile=?,update_user=?,update_date=current_date(),isdel=? where id=?";
+        //预编译
+        PreparedStatement ptmt = conn.prepareStatement(sql);
+        //传参
+        ptmt.setString(1, "无与伦比");
+        ptmt.setInt(2, 999);
+        ptmt.setInt(3, 888);
+        ptmt.setDate(4, new Date(2017,12,19));
+        ptmt.setString(5, "wangleimsg@gmail.com");
+        ptmt.setString(6, "18588661775");
+        ptmt.setString(7, "xingxing");
+        ptmt.setInt(8, 2);
+        ptmt.setInt(9, 27);
 
         //执行
         ptmt.execute();
@@ -59,16 +80,17 @@ public class GoddessDao {
         //获取连接
         Connection conn = DbUtil.getConnection();
         //sql
-        String sql = "delete from imooc_goddess where id = ?";
+        String sql = "delete from imooc_goddess where id = ? or id =?";  //要删除2条记录，要用 or ，不能用and
         //预编译
         PreparedStatement ptmt = conn.prepareStatement(sql);
         //传参
         ptmt.setInt(1, 2);
+        ptmt.setInt(2,19);
         //执行
         ptmt.execute();
     }
 
-    //查
+    //查  stmt.executeQuery(sql)    这个例子查询2列
     public List<Goddess> query() throws SQLException {
         Connection conn = DbUtil.getConnection();
         String sql = "select user_name,age from imooc_goddess";
@@ -87,7 +109,7 @@ public class GoddessDao {
         return gs;
     }
 
-    //查
+    //查  ptmt.executeQuery() 指定条件查询
     public Goddess get() throws SQLException {
         Connection conn = DbUtil.getConnection();
         String sql = "select * from imooc_goddess where id = ?";

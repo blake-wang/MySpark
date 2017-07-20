@@ -3,14 +3,21 @@ package jdbc;
 
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by JSJSB-0071 on 2017/7/20.
  */
 public class StartDb {
     public static void main(String[] args) throws SQLException {
-        createData();
+//        createData();
 //        insert2Table();
+
+//        querySet();
+//        queryOne();
+//        deleteOne();
+
+        updateOne();
 
     }
 
@@ -25,12 +32,14 @@ public class StartDb {
             g.setAge(20 + i);
             g.setBirthday(new Date());
             g.setEmail(i + "62939327@qq.com");
+            g.setMobile(i+"5814053390");
             g.setCreate_user("mayun" + i);
             g.setCreate_date(new Date());
             g.setUpdate_user("huateng" + (i + 1));
             g.setUpdate_date(new Date());
             g.setIsDel(i + 3);
 
+            //插入数据
             dao.addGoddess(g);
         }
     }
@@ -57,4 +66,33 @@ public class StartDb {
         }
 
     }
+
+    //查询数据库  返回数据集
+    public static void querySet () throws SQLException {
+        GoddessDao dao = new GoddessDao();
+        List<Goddess> result = dao.query();
+        for(Goddess g : result){
+            System.out.println(g.toString());
+        }
+    }
+
+    //查询数据库  返回一条数据
+    public static void queryOne () throws SQLException {
+        GoddessDao dao = new GoddessDao();
+        Goddess g = dao.get();
+        System.out.println(g.toString());
+    }
+
+    //删除数据表中一条数据
+    public static void deleteOne() throws SQLException {
+        GoddessDao dao = new GoddessDao();
+        dao.delGoddess();
+    }
+
+    //更新一条数据
+    public static void updateOne() throws SQLException {
+        GoddessDao dao = new GoddessDao();
+        dao.updateGoddess();
+    }
+
 }
