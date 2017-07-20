@@ -1,7 +1,7 @@
 package Test
 
 import java.text.SimpleDateFormat
-import java.util.Calendar
+import java.util.{Date, Calendar}
 
 /**
  * Created by JSJSB-0071 on 2017/7/20.
@@ -15,8 +15,12 @@ object DateDemo {
     println(date)
     println(sdf2)
 
-    val cal = Calendar.getInstance();
-    cal.setTime(date)
+//    val cal = Calendar.getInstance();
+//    cal.setTime(date)
+
+    val date2 = new Date(2017,12,9);
+    println(date2.getTime)
+
 
   }
 
