@@ -1,4 +1,4 @@
-package jdbc;
+package jdbc_imooc;
 
 import java.sql.*;
 import java.util.ArrayList;
