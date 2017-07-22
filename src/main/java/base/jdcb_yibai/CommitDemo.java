@@ -1,4 +1,4 @@
-package jdcb_yibai;
+package base.jdcb_yibai;
 
 import java.sql.Connection;
 import java.sql.SQLException;

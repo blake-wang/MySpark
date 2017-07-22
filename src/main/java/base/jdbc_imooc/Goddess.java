@@ -1,4 +1,4 @@
-package jdbc_imooc;
+package base.jdbc_imooc;
 
 import java.util.Date;
 
