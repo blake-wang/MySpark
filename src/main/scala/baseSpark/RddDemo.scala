@@ -28,7 +28,7 @@ object RddDemo {
     val conf = new SparkConf().setAppName("wc").setMaster("local[2]")
     val sc = new SparkContext(conf)
     //把一个数组转换成ParallelCollectionRDD[0]    //也可以是List等其他集合
-    val rdd1 = sc.parallelize(Array(1, 2, 3, 4, 5, 6, 7, 8, 9),5)
+    val rdd1 = sc.parallelize(Array(1, 2, 3, 4, 5, 6, 7, 8, 9), 5)
     println("rdd1 : " + rdd1)
     //把rdd1转换成MapPartitionsRDD[1]
     val rdd2 = rdd1.map(_ * 10)
