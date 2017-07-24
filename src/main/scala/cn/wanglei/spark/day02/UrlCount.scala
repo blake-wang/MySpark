@@ -16,8 +16,8 @@ object UrlCount {
     //切割原始数据，并把(url,1)输出
     val rdd1 = sc.textFile("H:\\itcast.log").map(line => {
       val f = line.split("\t")
-    (f(1), 1)
-  })
+      (f(1), 1)
+    })
 
     val rdd2 = rdd1.reduceByKey(_ + _)
     println("rdd2  :  " + rdd2.collect().toBuffer)

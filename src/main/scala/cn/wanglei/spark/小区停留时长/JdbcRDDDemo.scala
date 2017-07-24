@@ -1,4 +1,4 @@
-package cn.wanglei.spark.day03
+package cn.wanglei.spark.小区停留时长
 
 import java.sql.DriverManager
 
