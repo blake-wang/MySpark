@@ -3,8 +3,8 @@ package baseSpark
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
-  * Created by wanglei on 2017/7/24.
-  */
+ * Created by wanglei on 2017/7/24.
+ */
 object foreachDemo {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("wc").setMaster("local")
@@ -15,6 +15,6 @@ object foreachDemo {
     val rdd2 = rdd1.foreach(x => {
       println(x * 2)
     })
-
   }
 }
+

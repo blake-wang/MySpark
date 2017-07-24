@@ -1,4 +1,4 @@
-package cn.wanglei.spark.小区停留时长
+package cn.wanglei.spark.xiaoqustaytime
 
 import java.sql.DriverManager
 
