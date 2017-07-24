@@ -29,7 +29,7 @@ object StringUtil {
       println(x)
     })
     strList.foreach(x=>{
-      println(x)
+        println(x)
     })
 
 }

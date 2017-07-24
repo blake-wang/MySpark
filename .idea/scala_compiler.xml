@@ -12,7 +12,7 @@
       <parameters>
         <parameter value="-make:transitive" />
         <parameter value="-dependencyfile" />
-        <parameter value="D:\悟空\项目代码\MySpark\target/.scala_dependencies" />
+        <parameter value="F:\IdeaProjects\MySpark\target/.scala_dependencies" />
       </parameters>
     </profile>
   </component>
