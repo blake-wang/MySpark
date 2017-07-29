@@ -1,6 +1,6 @@
-package cn.wanglei.spark.day05.demo3
+package cn.wanglei.spark.FlumePullAndPush
 
-import cn.wanglei.spark.day05.LoggerLevels
+import cn.wanglei.spark.LoggerLevels
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.flume.FlumeUtils
 import org.apache.spark.streaming.{Seconds, StreamingContext}

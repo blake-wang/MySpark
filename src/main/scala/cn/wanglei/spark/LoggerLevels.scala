@@ -1,4 +1,4 @@
-package cn.wanglei.spark.day05
+package cn.wanglei.spark
 
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.Logging

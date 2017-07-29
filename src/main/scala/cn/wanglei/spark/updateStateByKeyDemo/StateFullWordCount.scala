@@ -1,6 +1,6 @@
-package cn.wanglei.spark.day05.demo2
+package cn.wanglei.spark.updateStateByKeyDemo
 
-import cn.wanglei.spark.day05.LoggerLevels
+import cn.wanglei.spark.LoggerLevels
 import org.apache.spark.{HashPartitioner, SparkConf, SparkContext}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
