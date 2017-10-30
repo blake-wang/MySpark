@@ -1,4 +1,4 @@
-package cn.wanglei.spark.day01
+package cn.wanglei.spark.wordcount
 
 import org.apache.spark.{SparkConf, SparkContext}
 

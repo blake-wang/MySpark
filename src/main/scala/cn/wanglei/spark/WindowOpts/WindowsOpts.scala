@@ -1,6 +1,6 @@
-package cn.wanglei.spark.day05.WindowOpts
+package cn.wanglei.spark.WindowOpts
 
-import cn.wanglei.spark.day05.LoggerLevels
+import cn.wanglei.spark.LoggerLevels
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.{Milliseconds, Seconds, StreamingContext}
 

@@ -6,8 +6,8 @@ import org.apache.spark.sql.types._
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
-  * Created by JSJSB-0071 on 2017/7/24.
-  */
+ * Created by JSJSB-0071 on 2017/7/24.
+ */
 object dataFrameDemo {
 
   def main(args: Array[String]) {
@@ -20,25 +20,29 @@ object dataFrameDemo {
     val conf = new SparkConf().setAppName("sqlDemo").setMaster("local")
     val sc = new SparkContext(conf)
     val sqlContext = new SQLContext(sc)
-    val personRdd = sc.textFile("hdfs://192.168.33.21:9000/people.txt").map(_.split(","))
-    //通过StructType，直接指定每个字段的schema
+    val personRdd = sc.textFile("hdfs://192.168.20.176:9000/xx.txt").map(_.split(","))
+    //通过StructType，直接指定每个字段的schema ，这里有两种方式
+    //  1
     val schema = StructType(
       List(StructField("id", IntegerType)
         , StructField("name", StringType),
         StructField("age", IntegerType)
       )
     )
+    //  2  推荐用这种
+    val schema2 = (new StructType()).add("id", IntegerType).add("name", StringType).add("age", IntegerType)
     //将Rdd映射到rowRDD
     val rowRDD = personRdd.map(row => Row(row(0).toInt, row(1).trim, row(2).toInt))
     //将schema信息应用到rowRDD上
-    val personDataFrame = sqlContext.createDataFrame(rowRDD, schema)
+    val personDataFrame = sqlContext.createDataFrame(rowRDD, schema2)
 
-    personDataFrame.write.json("hdfs://192.168.33.21:9000/json.txt")
+    //把DataFrame以json文件写到hdfs上
+    //    personDataFrame.write.json("hdfs://192.168.33.21:9000/json.txt")
 
     //注册表
     personDataFrame.registerTempTable("person")
     //执行SQL
-    sqlContext.sql("select * from person").show()
+    sqlContext.sql("select * from person order by age desc").show()
 
 
   }

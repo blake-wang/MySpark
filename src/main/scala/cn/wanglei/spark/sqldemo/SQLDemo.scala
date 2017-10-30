@@ -1,4 +1,4 @@
-package cn.wanglei.spark.day04
+package cn.wanglei.spark.sqldemo
 
 import org.apache.spark.sql.SQLContext
 import org.apache.spark.{SparkConf, SparkContext}

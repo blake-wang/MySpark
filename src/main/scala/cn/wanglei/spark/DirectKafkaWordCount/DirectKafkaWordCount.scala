@@ -1,4 +1,4 @@
-package cn.wanglei.spark.day05.DirectKafkaWordCount
+package cn.wanglei.spark.DirectKafkaWordCount
 
 import kafka.serializer.StringDecoder
 import org.apache.log4j.{Level, Logger}

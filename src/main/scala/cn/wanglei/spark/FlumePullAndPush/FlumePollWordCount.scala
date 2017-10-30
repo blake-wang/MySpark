@@ -1,4 +1,4 @@
-package cn.wanglei.spark.day05.demo3
+package cn.wanglei.spark.FlumePullAndPush
 
 import java.net.InetSocketAddress
 import org.apache.spark.SparkConf

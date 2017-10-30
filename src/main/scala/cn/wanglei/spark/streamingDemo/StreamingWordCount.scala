@@ -1,6 +1,6 @@
-package cn.wanglei.spark.day05.demo1
+package cn.wanglei.spark.streamingDemo
 
-import cn.wanglei.spark.day05.LoggerLevels
+import cn.wanglei.spark.LoggerLevels
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.{SparkConf, SparkContext}
 
