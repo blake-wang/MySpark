@@ -16,12 +16,7 @@ object DirectKafkaWordCount {
       list.get(0).substring(0, 10) + "-" + list.get(26)
     }*/
 
-  def processRdd(rdd: RDD[(String, String)]): Unit = {
-    val lines = rdd.map(_._2)
-    val words = lines.map(_.split(" "))
-    val wordCounts = words.map(x => (x, 1L)).reduceByKey(_ + _)
-    wordCounts.foreach(println)
-  }
+
 
   def main(args: Array[String]) {
     if (args.length < 3) {
@@ -61,16 +56,23 @@ object DirectKafkaWordCount {
     val messages = km.createDirectStream[String, String, StringDecoder, StringDecoder](
       ssc, kafkaParams, topicsSet)
 
-    //    messages.foreachRDD(rdd => {
-    //      if (!rdd.isEmpty()) {
-    //        // 先处理消息
-    //        processRdd(rdd)
-    //        // 再更新offsets
-    //        km.updateZKOffsets(rdd)
-    //      }
-    //    })
+    messages.foreachRDD(rdd => {
+      if (!rdd.isEmpty()) {
+        // 先处理消息
+        processRdd(rdd)
+        // 再更新offsets
+        //        km.updateZKOffsets(rdd)
+      }
+    })
 
     ssc.start()
     ssc.awaitTermination()
+  }
+
+  def processRdd(rdd: RDD[(String, String)]): Unit = {
+    val lines = rdd.map(_._2)
+    val words = lines.map(_.split(" "))
+    val wordCounts = words.map(x => (x, 1L)).reduceByKey(_ + _)
+    wordCounts.foreach(println)
   }
 }
