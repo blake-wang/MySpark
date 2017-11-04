@@ -8,7 +8,12 @@ import java.sql.Statement;
 
 /**
  * Created by wanglei on 2017/11/4.
- * 1:
+ * 1:注册数据库的驱动
+ * 2:获取与数据库的连接
+ * 3:创建代表SQL语句的对象
+ * 4:执行SQL语句
+ * 5:如果执行的是查询语句，要对结果进行处理
+ * 6:释放占用的资源
  */
 public class JdbcSimple {
     public static void main(String[] args)
