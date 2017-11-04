@@ -11,9 +11,10 @@ import java.util.ResourceBundle;
  */
 public class GetResourceFile {
     public static void main(String[] args)
-            throws IOException {
+            throws IOException
+    {
         //第一种方式
-//        getResourceFileOne();
+        //        getResourceFileOne();
         //第二种方式
         getResourceFileTwo();
     }
@@ -28,9 +29,9 @@ public class GetResourceFile {
         //windows系统中,一个文件全名，由 [基名.扩展名] 构成
         //传入参数为文件的基名
 
-//        得到/src/main/resources下的cfg.properties
-        ResourceBundle rb = ResourceBundle.getBundle("cfg");
-        String value = rb.getString("a");
+        //        得到/src/main/resources下的cfg.properties
+        ResourceBundle rb    = ResourceBundle.getBundle("cfg");
+        String         value = rb.getString("a");
         System.out.println(value);
 
     }
@@ -43,12 +44,13 @@ public class GetResourceFile {
      * 如果两个目录下的资源文件同名，优先获取java目录下的
      */
     private static void getResourceFileTwo()
-            throws IOException {
+            throws IOException
+    {
         ClassLoader classLoader = GetResourceFile.class.getClassLoader();
-        //1:
+        //1: 得到的是resource目录下的
         InputStream is = classLoader.getResourceAsStream("cfg.properties");
-        //2:
-//        InputStream is = classLoader.getResourceAsStream("util/cfg.properties");
+        //2: 得到的是util目录下的
+        //InputStream is = classLoader.getResourceAsStream("util/cfg.properties");
 
         Properties pro = new Properties();
         pro.load(is);

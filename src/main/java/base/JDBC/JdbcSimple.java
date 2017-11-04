@@ -59,7 +59,7 @@ public class JdbcSimple {
                 }
                 stmt = null;
             }
-            if(conn!=null){
+            if (conn != null) {
                 try {
                     conn.close();
                 } catch (SQLException e) {
