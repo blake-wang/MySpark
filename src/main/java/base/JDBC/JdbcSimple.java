@@ -17,9 +17,11 @@ import java.sql.Statement;
  */
 public class JdbcSimple {
     public static void main(String[] args)
-            throws SQLException {
+            throws SQLException, ClassNotFoundException
+    {
         //1:注册数据库的驱动
-        DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+//        DriverManager.registerDriver(new com.mysql.jdbc.Driver());//这种方式不好，不推荐使用
+        Class.forName("com.mysql.jdbc.Driver");
         //2:获取与数据库的连接
         Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.126.142:3306/testJdbc",
                 "root",
