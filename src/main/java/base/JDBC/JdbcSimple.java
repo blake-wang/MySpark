@@ -29,6 +29,7 @@ public class JdbcSimple {
             System.out.println("user_name : " + user_name);
         }
         //6:释放占用的资源
+        resultSet.close();
         stmt.close();
         resultSet.close();
 
