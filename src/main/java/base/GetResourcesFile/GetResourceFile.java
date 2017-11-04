@@ -41,13 +41,15 @@ public class GetResourceFile {
      * 1：/src/main/java
      * 2:/src/main/resources
      * 如果两个目录下的资源文件同名，优先获取java目录下的
-     *
      */
     private static void getResourceFileTwo()
             throws IOException {
         ClassLoader classLoader = GetResourceFile.class.getClassLoader();
-//        InputStream is = classLoader.getResourceAsStream("cfg.properties");
-        InputStream is = classLoader.getResourceAsStream("bbb.properties");
+        //1:
+        InputStream is = classLoader.getResourceAsStream("cfg.properties");
+        //2:
+//        InputStream is = classLoader.getResourceAsStream("util/cfg.properties");
+
         Properties pro = new Properties();
         pro.load(is);
         String value = pro.getProperty("a");
