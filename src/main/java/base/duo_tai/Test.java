@@ -2,6 +2,7 @@ package base.duo_tai;
 
 /**
  * Created by wanglei on 2017/11/5.
+ * 测试子类继承父类，方法调用，类型转换
  */
 public class Test {
     public static void main(String[] args) {
