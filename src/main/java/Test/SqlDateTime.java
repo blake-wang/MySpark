@@ -4,6 +4,7 @@ package Test;
 
 /**
  * Created by JSJSB-0071 on 2017/7/21.
+ * java.sql.Date是java.util.Date的子类
  */
 public class SqlDateTime {
     public static void main(String[] args) {
