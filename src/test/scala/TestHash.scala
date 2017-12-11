@@ -3,6 +3,9 @@
   */
 object TestHash {
   def main(args: Array[String]): Unit = {
+    val str = ""
+    println(str.toInt)
+
     val mod = "java.example.cn"
     val num = 3
     val index = mod.hashCode % num
