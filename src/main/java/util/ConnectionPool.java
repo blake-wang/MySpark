@@ -6,13 +6,10 @@ import java.util.LinkedList;
 
 /**
  * Created by bigdata on 17-11-6.
- */
-
-
-/**
- * Created by zpf on 2016/8/26.
  * 数据库连接池
  */
+
+
 public class ConnectionPool {
     private static LinkedList<Connection> connectionQueue;
 
@@ -32,7 +29,7 @@ public class ConnectionPool {
                     Connection conn = DriverManager.getConnection(
                             "jdbc:mysql://Master:3306/sparkstreaming",
                             "root",
-                            "12345");
+                            "123456");
                     connectionQueue.push(conn);
                 }
             }
