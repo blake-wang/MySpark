@@ -1,4 +1,4 @@
-package baseScala.ArrayBuffer
+package baseScala.ArrayBufferDemo
 
 import scala.collection.mutable.ArrayBuffer
 

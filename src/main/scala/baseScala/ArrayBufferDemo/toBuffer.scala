@@ -1,4 +1,4 @@
-package baseScala.ArrayBuffer
+package baseScala.ArrayBufferDemo
 
 /**
   * Created by wanglei on 2017/12/16.

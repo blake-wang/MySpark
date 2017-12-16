@@ -1,4 +1,4 @@
-package baseScala.Array
+package baseScala.ArrayDemo
 
 /**
   * Created by JSJSB-0071 on 2017/7/22.
