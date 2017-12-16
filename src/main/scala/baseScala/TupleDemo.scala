@@ -19,13 +19,12 @@ object TupleDemo {
     println(res)
 
     println("---------把元组转换成Map-------------")
-
-    //在数组中装元组
-    val arr = Array(("中国",100),("美国",80),("日本",60))
-    println(arr.toBuffer)
-    //把对偶的集合转换成映射
-    val resMap = arr.toMap
-    println(resMap)
+//
+//    //在数组中装元组
+//    val arr = Array(("中国",100),("美国",80),("日本",60))
+//    println(arr.toBuffer)
+//    //把对偶的集合转换成映射
+//    val resMap = arr.toMap
+//    println(resMap)
   }
-
 }

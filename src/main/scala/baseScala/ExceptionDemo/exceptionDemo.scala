@@ -27,7 +27,7 @@ object exceptionDemo {
       throw new IllegalArgumentException
     } catch {
       //如果不指定类型，默认匹配就是第一个
-      case _ => println("第二种 IOException")
+      case _:Throwable => println("第二种 IOException")
       case b: IllegalArgumentException => println("IllegalArgumentException")
     }
 
