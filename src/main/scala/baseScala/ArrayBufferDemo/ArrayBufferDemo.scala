@@ -13,6 +13,8 @@ import scala.collection.mutable.ArrayBuffer
   * Cannot resolve reference forForArrayBuffer with such signature
   * 无法解决这样的签名参考forForArrayBuffer
   * 如果出现这个错误提示，肯定是数据类型错了，不匹配
+  *
+  * ArrayBuffer可以直接打印，看里面的内容
   */
 object ArrayBufferDemo {
 
@@ -66,11 +68,11 @@ object ArrayBufferDemo {
   def forArrayBuffer(ab: ArrayBuffer[Any]) = {
     for (i <- 0 to ab.length - 1) {
       println(ab(i))
-//      if (i == ab.length - 1) {
-//        for (j <- ab(i)) {
-//          println(j)
-//        }
-//      }
+      //      if (i == ab.length - 1) {
+      //        for (j <- ab(i)) {
+      //          println(j)
+      //        }
+      //      }
     }
   }
 

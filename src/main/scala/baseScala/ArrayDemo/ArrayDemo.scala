@@ -1,7 +1,6 @@
 package baseScala.ArrayDemo
 
 /**
-  * Created by JSJSB-0071 on 2017/7/22.
   * 数组
   * Array代表的含义与Java类似，也是长度不可变的数据
   * 数组初始化后，长度就固定下来了，而且元素全部根据其类型初始化
