@@ -1,5 +1,7 @@
 package Utils
 
+import util.ConfigurationUtil
+
 /**
   * Created by sumenghu on 2016/9/1.
   */

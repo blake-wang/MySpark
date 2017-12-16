@@ -1,6 +1,5 @@
 package base.OOM;
 
-import javax.jdo.Enhancer;
 
 /**
  * Created by bigdata on 17-12-12.
@@ -20,8 +19,8 @@ public class JavaMethodAreaOOM {
 //            enhancer.create();
 //        }
 //    }
-//
-//    static class OOMObject {
-//
-//    }
+
+    static class OOMObject {
+
+    }
 }

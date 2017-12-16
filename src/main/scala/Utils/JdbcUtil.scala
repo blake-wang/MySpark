@@ -8,7 +8,7 @@ import util.ConfigurationUtil
 import scala.collection.mutable.ArrayBuffer
 
 /**
-  * Created by kequan on 2/22/17.
+  * JDBC工具类
   */
 object JdbcUtil {
   /**

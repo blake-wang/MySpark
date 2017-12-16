@@ -2,6 +2,7 @@ package baseScala
 
 /**
  * Created by JSJSB-0071 on 2017/7/22.
+  * _ 例子
  */
 object _Demo {
   //定义方法
