@@ -1,7 +1,8 @@
-package baseScala
+package baseScala.funcDemo
 
 /**
  * Created by JSJSB-0071 on 2017/7/22.
+  * 定义函数的方式
  */
 object Demo1 {
 

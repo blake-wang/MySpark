@@ -32,11 +32,11 @@ object demo {
     println(arr2)
     val arr8 = arr2.distinct
     println(arr2)
-    println("arr8 : "+ arr8)
+    println("arr8 : " + arr8)
 
     val arr3 = mutable.HashSet[String]()
-    val arr4 =arr3.add("123")
-    println("arr4 : "+ arr4)
+    val arr4 = arr3.add("123")
+    println("arr4 : " + arr4)
     arr3.add("456")
     arr3.add("789")
     arr3.add("123")

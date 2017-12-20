@@ -1,4 +1,4 @@
-package baseScala
+package baseScala.funcDemo
 
 /**
   * Created by JSJSB-0071 on 2017/7/22.
