@@ -14,6 +14,48 @@ object DateUtils {
   val mm_FORMAT = new SimpleDateFormat("mm")
   val HH_FORMAT = new SimpleDateFormat("HH")
 
+  def main(args: Array[String]): Unit = {
+
+    val startday = "2017-11-11"
+
+
+    val simpleDateFormat = new SimpleDateFormat("yyyyMMdd")
+    val now: Date = new Date()
+
+    //根据参数传入日期，取出
+    val currentday = startday.replace("-", "")
+    //获取参数传入日期的第二天
+    val secondday = getDayByParams(simpleDateFormat, currentday, 1)
+    //获取程序执行当前日期
+    val today = simpleDateFormat.format(now)
+    //获取程序执行日期的前一天
+    val yesterday = getDayByParams(simpleDateFormat, today, -1)
+
+    println("startday : " + startday)
+    println("currentday : " + currentday)
+    println("secondday : " + secondday)
+    println("today : " + today)
+    println("yesterday : " + yesterday)
+
+  }
+
+  /**
+    * 根据传入的日期以及时间差，获取其他的日期
+    *
+    * @param simpleDateFormat
+    * @param currentday
+    * @param params
+    * @return
+    */
+  def getDayByParams(simpleDateFormat: SimpleDateFormat, currentday: String, params: Int): String = {
+    val cal = Calendar.getInstance()
+    val currentDate = simpleDateFormat.parse(currentday)
+    cal.setTime(currentDate)
+    cal.add(Calendar.DATE, params)
+    val otherDay = simpleDateFormat.format(cal.getTime)
+    return otherDay
+  }
+
   /**
     * 判断一个时间是否在另一个时间之前
     *
