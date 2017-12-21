@@ -1,4 +1,4 @@
-package baseScala
+package baseScala.listDemo
 
 import scala.collection.mutable.ListBuffer
 
