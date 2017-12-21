@@ -14,7 +14,7 @@ object ioDemo {
     //读取文件02.txt
     val lines2 = scala.io.Source.fromFile("F:\\IdeaProjects\\MySpark\\src\\02.txt").mkString
     println(lines2)
-    //合并两个文件的内容
+    //使用List的伴生对象，将多个文件内容创建为一个List
     val lines = List(lines1, lines2)
     println(lines)
 
