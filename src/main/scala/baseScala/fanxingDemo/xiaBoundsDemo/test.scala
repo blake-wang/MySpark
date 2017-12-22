@@ -20,8 +20,6 @@ object test {
     //teacher类
     val teacher = new Teacher("Peter")
     getIDCard(teacher)
-
-
   }
 
   //界定下边界
