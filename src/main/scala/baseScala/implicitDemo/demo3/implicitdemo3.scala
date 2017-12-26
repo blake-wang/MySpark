@@ -12,12 +12,11 @@ object implicitdemo3 {
   def main(args: Array[String]): Unit = {
 
     signForExam("leo")
-
   }
 
   implicit val signPen = new SignPen
 
-  def signForExam(name: String)(implicit signPen: SignPen){
+  def signForExam(name: String)(implicit signPen: SignPen) {
     signPen.write(name + " come to exam in time.")
   }
 }
