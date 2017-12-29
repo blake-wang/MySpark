@@ -5,7 +5,7 @@ package baseScala
   */
 object gitDemo {
   def main(args: Array[String]): Unit = {
-
+    println("ha")
   }
 
 }
