@@ -4,19 +4,19 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 /**
   * Created by wanglei on 2017/12/31.
-  * reduceByKey
+  * cogroup
   *
-  * 案例：计算成绩的总分
+  * cogroup的使用方法要注意
   */
-object reduceByKeyDemo {
+object cogroup {
   def main(args: Array[String]): Unit = {
     val sparkConf = new SparkConf().setAppName(this.getClass.getName.replace("$", "")).setMaster("local[1]")
     val sparkContext = new SparkContext(sparkConf)
-    val arr = Array(("wanglei", 80), ("wanglei", 60), ("aixu", 70), ("aixu", 100))
-    val tupleRDD = sparkContext.parallelize(arr)
-    //reduceByKey会生成一个新的RDD
-    val result = tupleRDD.reduceByKey(_ + _)
-    result.foreach(println(_))
+    val arr1 = Array((1, "wanglei"), (2, "aixu"), (3, "志超"))
+    val arr2 = Array((9, 28), (2, 26), (3, 29))
+    val rdd1 = sparkContext.parallelize(arr1)
+    val rdd2 = sparkContext.parallelize(arr2)
+    val rdd3 = rdd1.cogroup(rdd2)
+    rdd3.foreach(println(_))
   }
-
 }
