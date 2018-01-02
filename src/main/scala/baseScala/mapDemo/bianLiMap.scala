@@ -26,4 +26,5 @@ object bianLiMap {
     val m2 = for ((key, value) <- m1) yield (value, key)
     println(m2)
   }
+
 }
