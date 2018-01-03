@@ -105,7 +105,6 @@ public class redisDemo {
         String hget = jedis11.hget("zhongguo", "guangdong");
         System.out.println(hget);
 
-
         System.out.println("------------------------------");
 
         jedis11.hset("zhongguo", "shanxi", "xian");
@@ -113,16 +112,25 @@ public class redisDemo {
         jedis11.hset("zhongguo", "jiangsu", "nanjing");
 
         Map<String, String> zhongguo = jedis11.hgetAll("zhongguo");
-        System.out.println(zhongguo.get("shanxi"));
-        System.out.println(zhongguo.get("henan"));
-        System.out.println(zhongguo.get("jiangsu"));
+
+        //取单个key-val
+        String shanxi = zhongguo.get("shanxi");
+        String henan = zhongguo.get("henan");
+        String jiangsu = zhongguo.get("jiangsu");
+        System.out.println(shanxi);
+        System.out.println(henan);
+        System.out.println(jiangsu);
+
         System.out.println("------------------------------");
+        //迭代器 key集合
         Iterator<String> keyIterator = zhongguo.keySet().iterator();
         while (keyIterator.hasNext()) {
             String key = keyIterator.next();
             System.out.println("key : " + key);
         }
+
         System.out.println("------------------------------");
+        //迭代器 value集合
         Iterator<String> valueIterator = zhongguo.values().iterator();
         while (valueIterator.hasNext()) {
             String value = valueIterator.next();
@@ -130,14 +138,19 @@ public class redisDemo {
         }
 
         System.out.println("------------------------------");
+        //遍历key的集合
         for (String fields : zhongguo.keySet()) {
             System.out.println(zhongguo.get(fields));
         }
+
         System.out.println("------------------------------");
+        //遍历value的集合
         for (String s : zhongguo.values()) {
             System.out.println(s);
         }
+
         System.out.println("------------------------------");
+        //遍历key-value对的集合
         for (Map.Entry<String, String> entry : zhongguo.entrySet()) {
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }

@@ -11,7 +11,21 @@ package baseScala.caseDemo
   */
 object caseDemo {
   def main(args: Array[String]): Unit = {
-    judgeGrade("B")
+//    judgeGrade("B")
+
+
+    judgeString
+
+  }
+
+  private def judgeString = {
+    val advName = 1
+    val topic = advName match {
+      case 1 => "momo"
+      case 2 => "baidu"
+      case 3 => "jinritoutiao"
+    }
+    println(topic)
   }
 
   def judgeGrade(grade: String) {
