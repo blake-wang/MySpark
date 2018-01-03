@@ -1,8 +1,7 @@
-package baseSpark
+package baseSpark.createDataFrameDemo
 
-
-import org.apache.spark.sql.{Row, SQLContext}
 import org.apache.spark.sql.types._
+import org.apache.spark.sql.{Row, SQLContext}
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**

@@ -13,7 +13,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="HelloSpark" target="1.7" />
       <module name="MySpark" target="1.7" />
     </bytecodeTargetLevel>
   </component>
