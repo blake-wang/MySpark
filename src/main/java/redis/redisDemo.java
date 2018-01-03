@@ -4,9 +4,7 @@ import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by bigdata on 18-1-3.
@@ -30,7 +28,7 @@ public class redisDemo {
         jedis12.select(12);
 
 //        setAndGet(jedis11);
-//        hsetAndhget(jedis11);
+        hsetAndhget(jedis11);
 //        msetAndmget(jedis11);
 //        hmsetAndhmget(jedis11);
 
@@ -42,6 +40,7 @@ public class redisDemo {
      * hmset:一次可以存储 key-map  ,map是一个兼职对集合
      * hmget:一次可以取出 key下对应的多个field的value，返回的是value的集合
      * hgetall:一次可以取出 key下对应的所有field-value,返回的是map集合
+     *
      * @param jedis11
      */
     private static void hmsetAndhmget(Jedis jedis11) {
@@ -117,6 +116,18 @@ public class redisDemo {
         System.out.println(zhongguo.get("shanxi"));
         System.out.println(zhongguo.get("henan"));
         System.out.println(zhongguo.get("jiangsu"));
+        System.out.println("------------------------------");
+        Iterator<String> keyIterator = zhongguo.keySet().iterator();
+        while (keyIterator.hasNext()) {
+            String key = keyIterator.next();
+            System.out.println("key : " + key);
+        }
+        System.out.println("------------------------------");
+        Iterator<String> valueIterator = zhongguo.values().iterator();
+        while (valueIterator.hasNext()) {
+            String value = valueIterator.next();
+            System.out.println("value : " + value);
+        }
 
         System.out.println("------------------------------");
         for (String fields : zhongguo.keySet()) {
