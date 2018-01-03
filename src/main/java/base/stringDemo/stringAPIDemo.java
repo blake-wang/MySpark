@@ -7,7 +7,7 @@ package base.stringDemo;
  * ""和null的区别
  * ""是字符串常量，同时也是一个String类的对象，既然是对象当然可以调用String类中的方法
  * null是空常量，不能调用任何的方法，否则会出现空指针异常，null常量可以给任意的引用数据类型赋值
- *
+ * <p>
  * 根据索引去取字符串的时候，可能会出现字符串索引角标越界异常StringIndexOutOfBoundsException
  */
 public class stringAPIDemo {
@@ -56,13 +56,89 @@ public class stringAPIDemo {
         //trim  去掉字符串两端的空格
 //        trim(s7);
 
-        //toUpperCase toLowerCase   将字符串中的字符，全部转换成大写，或者全部转换成小写
+        //toUpperCase toLowerCase   将字符串中的字符，全部转换成大写，或者全部转换成小写,返回的是一个新的字符串
 //        toUpperLowerCase(s4);
 
+        //toCharArray   将字符串转换成字符数组
+//        toCharArray(s4);
+
+        //getBytes()    将字符串转换为字节数组 , 这个也叫编码：把我们人看得懂的转换为计算机看得懂的
+//        getBytes(s4);
+
+        //valueOf   可以将任意数据类型，转换成字符串
+//        valueOf();
+
+        //concat    拼接字符串
+//        concat(s4, s7);
+
+        //replace   替换字符串中的字符，生成新的字符串
+//        replace(s4);
+
+        //compareTo 按照码表值比较两个字符串的大小，大于是正数，小于是负数，等于是0
+//        compareTo();
+
+        //compareToIgnoreCase   按照码表比较字符串的大小，忽略大小写
+        compareToIgnoreCase();
+
+
+    }
+
+    private static void compareToIgnoreCase() {
+        String ss1 = "wanglei";
+        String ss2 = "WANGLEI";
+        int i = ss1.compareToIgnoreCase(ss2);
+        System.out.println(i);
+        System.out.println(ss1.compareTo(ss2));
+    }
+
+    private static void compareTo() {
+        String ss1 = "bbc";
+        String ss2 = "abc";
+        int i = ss1.compareTo(ss2);
+        System.out.println(i);
+    }
+
+    private static void replace(String s4) {
+        System.out.println(s4);
+        System.out.println(s4.replace("g", "p"));
+        System.out.println(s4.replace("x", "p"));    //x不存在，保留原字符不改变
+        System.out.println(s4.replace(" ", "HAHA"));
+    }
+
+    private static void concat(String s4, String s7) {
+        System.out.println(s4.concat(s7));
+        System.out.println(s7.concat(s4));
+    }
+
+    private static void valueOf() {
+        System.out.println(String.valueOf(123));
+        System.out.println(String.valueOf(true));
+        long l = 999999999999999999L;
+        System.out.println(String.valueOf(l));
+        System.out.println(String.valueOf(12.01));
+        float f01 = 12.2f;
+        float f02 = 12.27f;
+        Double d01 = 19.6;
+        Double d02 = 19.69;
+        System.out.println(String.valueOf(f01));
+        System.out.println(String.valueOf(f02));
+        System.out.println(String.valueOf(d01));
+        System.out.println(String.valueOf(d02));
+        String s = f01 + "";
+        System.out.println(s);
+    }
+
+    private static void getBytes(String s4) {
+        byte[] bytes = s4.getBytes();
+        for (byte aByte : bytes) {
+            System.out.print(aByte + " ");
+        }
+        System.out.println(bytes);
+    }
+
+    private static void toCharArray(String s4) {
         char[] chars = s4.toCharArray();
         System.out.println(chars[8]);
-
-
     }
 
     private static void toUpperLowerCase(String s4) {
