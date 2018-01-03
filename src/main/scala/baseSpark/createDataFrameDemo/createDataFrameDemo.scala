@@ -8,7 +8,10 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 /**
   * Created by wanglei on 2018/1/2.
-  * 通过json文件创建dataFrame
+  *
+  * DataFrame
+  *
+  * 其中的每一行都是 Row
   *
   *
   */
