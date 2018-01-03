@@ -1,7 +1,6 @@
-package baseSpark.fileDemo
+package baseSpark.createRDDDemo
 
 import org.apache.spark.{SparkConf, SparkContext}
-import util.ConfigurationUtil
 
 /**
   * Created by bigdata on 17-12-22.
