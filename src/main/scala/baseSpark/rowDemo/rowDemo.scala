@@ -28,5 +28,10 @@ object rowDemo {
     val last = row(4)
     println("last : " + last)
 
+    println("-----------------------------")
+
+    val game_account2 = row.get(0)
+    println("game_account2 : " + game_account2)
+
   }
 }
