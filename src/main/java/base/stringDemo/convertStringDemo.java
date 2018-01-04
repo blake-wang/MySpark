@@ -2,7 +2,7 @@ package base.stringDemo;
 
 /**
  * Created by wanglei on 2018/1/4.
- * 
+ *
  * 将string转换成其他数据类型
  */
 public class convertStringDemo {
