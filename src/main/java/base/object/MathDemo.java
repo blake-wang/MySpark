@@ -1,4 +1,4 @@
-package base.MathDemo;
+package base.object;
 
 /**
  * Created by wanglei on 2018/1/4.
