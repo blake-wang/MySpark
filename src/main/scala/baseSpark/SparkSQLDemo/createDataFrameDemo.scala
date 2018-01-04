@@ -1,4 +1,4 @@
-package baseSpark.createDataFrameDemo
+package baseSpark.SparkSQLDemo
 
 import Utils.StringUtils
 import org.apache.spark.sql.hive.HiveContext
