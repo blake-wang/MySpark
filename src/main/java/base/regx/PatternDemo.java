@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * Created by wanglei on 2018/1/4.
  * Pattern Matcher
- *
+ * <p>
  * 从大的字符串中找出需要的字符串
  */
 public class PatternDemo {
@@ -29,7 +29,7 @@ public class PatternDemo {
         System.out.println("==========================================");
 
         //查找出所符合正则表达式的子字符串
-        while(m.find()){
+        while (m.find()) {
             System.out.println(m.group());
         }
     }
