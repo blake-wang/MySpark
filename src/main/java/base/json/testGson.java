@@ -27,6 +27,9 @@ public class testGson {
 
     }
 
+    /**
+     * Gson
+     */
     private static void testToJson() {
         Gson gson = new Gson();
         String str = gson.toJson(new People("wanglei", 18));

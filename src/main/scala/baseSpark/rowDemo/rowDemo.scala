@@ -1,6 +1,7 @@
 package baseSpark.rowDemo
 
 import org.apache.spark.sql.Row
+
 /**
   * Created by bigdata on 18-1-3.
   * row
@@ -32,6 +33,11 @@ object rowDemo {
 
     val game_account2 = row.get(0)
     println("game_account2 : " + game_account2)
+    println("-----------------------------")
+
+    println(row.schema)
+    println(row.size)
+
 
   }
 }
