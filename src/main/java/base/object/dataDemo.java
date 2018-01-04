@@ -28,7 +28,7 @@ public class dataDemo {
         float f = 12.3F;    //如果要声明一个float类型，必须在后面加f或者F
         double d = 12.35;
         boolean boo = true;
-        char c = 'C';
+        char c = 'C';       //字符只能使用单引号''
 
 
         //引用数据类型(类，接口，数组)
