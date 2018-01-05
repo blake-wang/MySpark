@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * Created by wanglei on 2018/1/4.
- * Date类
+ * Date类  日期类
  * <p>
  * java.util.Date
  * java.sql.Date
@@ -36,5 +36,6 @@ public class DateDemo {
         //setTime()     设置毫秒值，改变时间对象
         d1.setTime(1000);
         System.out.println(d1);
+
     }
 }
