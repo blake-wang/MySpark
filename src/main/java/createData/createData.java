@@ -6,6 +6,7 @@ package createData;
  */
 public class createData {
     public static void main(String[] args) {
+        
 
     }
 }
