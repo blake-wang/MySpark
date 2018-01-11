@@ -15,10 +15,8 @@ public class createData {
 
         Internet internet = faker.internet();
 
-
         for (int i = 0; i < 100; i++) {
             System.out.println(internet.url());
-
         }
 
         Book book = faker.book();
@@ -29,8 +27,6 @@ public class createData {
         System.out.println(name.name());
         Address address = faker.address();
         System.out.println(address.city());
-
-
 
     }
 }
