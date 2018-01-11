@@ -37,5 +37,11 @@ public class DateDemo {
         d1.setTime(1000);
         System.out.println(d1);
 
+
+        //通过传入时间戳构建Date对象，默认接受的是以毫秒为单位的
+        Date d3 = new Date(1514185005000L);
+        System.out.println(d3);
+
+
     }
 }
