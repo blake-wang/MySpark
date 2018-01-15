@@ -19,7 +19,7 @@ object demo {
 
     val baicai = new Vegetable("baicai")
     val huanggua = new Vegetable("huanggua")
-    val res2 = packageFood(baicai,huanggua)
+    val res2 = packageFood(baicai, huanggua)
     println(res2)
 
   }

@@ -31,9 +31,11 @@ object demo {
   def enterMeet(card: Card[Master]): Unit = {
     println("welcome to have this meeting!")
   }
+
   def enterMeet1(card: Card1[Master]): Unit = {
     println("welcome to have this meeting!")
   }
+
   def enterMeet2(card: Card2[Professional]): Unit = {
     println("welcome to have this meeting!")
   }

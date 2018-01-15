@@ -3,8 +3,8 @@ package baseSpark
 import org.apache.spark.{SparkContext, SparkConf}
 
 /**
- * Created by JSJSB-0071 on 2017/7/22.
- */
+  * Created by JSJSB-0071 on 2017/7/22.
+  */
 object RddDemo {
   def main(args: Array[String]) {
     //    readFileFromHdfs

@@ -3,10 +3,10 @@ package baseScala
 import java.util.HashMap
 
 /**
- * Created by JSJSB-0071 on 2017/7/22.
- *
- * 映射
- */
+  * Created by JSJSB-0071 on 2017/7/22.
+  *
+  * 映射
+  */
 object MapTableDemo {
   //
   //第一种创建Map的方式，用箭头
@@ -15,9 +15,7 @@ object MapTableDemo {
   val map2 = Map(("tom", 85), ("jerry", 99), ("blake", 60))
   //第三种创建Map的方式，使用java中的Map
   val jMap1 = new HashMap()
-  val jMap2 = new HashMap[String,Int]()
-
-
+  val jMap2 = new HashMap[String, Int]()
 
 
   //注意，在scala中，有两种Map，一个是immutable包下的Map，该Map中的内容不可变
@@ -32,7 +30,7 @@ object MapTableDemo {
 
 
   //对偶元组   --对偶元组是可以直接添加进map中的
-  val kvTuple = ("peper",59)
+  val kvTuple = ("peper", 59)
 
 
   def main(args: Array[String]) {
@@ -64,9 +62,9 @@ object MapTableDemo {
     println(m2)
     println(m2("a")) //通过键a取出对应的值
 
-//    m2("a") = 66
-    m2 += kvTuple    //把元组添加进m2
-    println(m2)      //m2的值不可以更改
+    //    m2("a") = 66
+    m2 += kvTuple //把元组添加进m2
+    println(m2) //m2的值不可以更改
 
   }
 

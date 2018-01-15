@@ -17,8 +17,7 @@ import java.net.Socket;
  */
 public class Server {
     public static void main(String[] args)
-            throws IOException
-    {
+            throws IOException {
         ServerSocket server = new ServerSocket(12345);
         System.out.println("服务器已经启动，绑定端口12345");
         //接收客户端的请求
@@ -33,7 +32,7 @@ public class Server {
         //读取客户端发过来的数据
         int len = ins.read(arr);
         //将数据转换成字符串并打印
-        System.out.println(new String(arr,0,len));
+        System.out.println(new String(arr, 0, len));
         socket.close();
 
     }

@@ -8,8 +8,8 @@ import redis.clients.jedis.JedisPool
 import util.ConfigurationUtil
 
 /**
- * Created by JSJSB-0071 on 2016/12/10.
- */
+  * Created by JSJSB-0071 on 2016/12/10.
+  */
 class MyRedisClient extends KryoSerializable {
 
 

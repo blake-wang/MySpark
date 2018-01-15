@@ -18,11 +18,10 @@ object demo1 {
     val rdd = sparkContext.parallelize(Array(("A", 1), ("A", 1), ("A", 1), ("A", 1), ("A", 1)), 3)
 
 
-    RDDUtils.getPartitionCounts(sparkContext,rdd).foreach(println)
+    RDDUtils.getPartitionCounts(sparkContext, rdd).foreach(println)
 
 
   }
-
 
 
 }

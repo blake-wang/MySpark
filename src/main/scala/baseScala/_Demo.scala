@@ -1,9 +1,9 @@
 package baseScala
 
 /**
- * Created by JSJSB-0071 on 2017/7/22.
+  * Created by JSJSB-0071 on 2017/7/22.
   * _ 例子
- */
+  */
 object _Demo {
   //定义方法
   def m2(x: Int, y: Int) = {
@@ -15,7 +15,7 @@ object _Demo {
 
 
   //定义方法，传入参数为函数
-  def m4(f: Int=> Int): Unit = {
+  def m4(f: Int => Int): Unit = {
 
   }
 

@@ -10,8 +10,8 @@ import java.sql.Statement;
  */
 public class JdbcUtilTest {
     public static void main(String[] args) {
-        Connection conn      = null;
-        Statement stmt      = null;
+        Connection conn = null;
+        Statement stmt = null;
         ResultSet resultSet = null;
         try {
             conn = JdbcUtil.getConnetion();
@@ -26,7 +26,7 @@ public class JdbcUtilTest {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            JdbcUtil.release(resultSet,stmt,conn);
+            JdbcUtil.release(resultSet, stmt, conn);
         }
     }
 }

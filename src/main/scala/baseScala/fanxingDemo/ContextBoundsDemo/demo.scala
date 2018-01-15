@@ -12,7 +12,7 @@ package baseScala.fanxingDemo.ContextBoundsDemo
   */
 object demo {
   def main(args: Array[String]): Unit = {
-    val sum = new Calculator(1,2).max
+    val sum = new Calculator(1, 2).max
     println(sum)
 
   }

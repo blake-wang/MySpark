@@ -13,14 +13,14 @@ public class JdbcUtil {
     public static final String PASSWORD = "hadoop";
 
 
-    public static Connection getConnection(){
+    public static Connection getConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(URL,USER,PASSWORD);
+            Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
             return conn;
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("数据库连接不成功："+e);
+            System.out.println("数据库连接不成功：" + e);
             return null;
         }
     }

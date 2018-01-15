@@ -1,9 +1,9 @@
 package baseScala.funcDemo
 
 /**
- * Created by JSJSB-0071 on 2017/7/22.
+  * Created by JSJSB-0071 on 2017/7/22.
   * 定义函数的方式
- */
+  */
 object Demo1 {
 
   val map1 = Map()
@@ -23,15 +23,15 @@ object Demo1 {
     f1(2)
   }
 
-  def m2(f: Int => String):String={
+  def m2(f: Int => String): String = {
     f2(19)
   }
 
   def main(args: Array[String]) {
     val res1 = m1(f1) //返回的是int类型
-    println(res1+2)
+    println(res1 + 2)
     val res2 = m2(f2) //返回的是String类型
-    println(res2+2)
+    println(res2 + 2)
 
     val arr = Array(1, 2, 3, 4, 5, 6, 7, 8, 9)
     val r1 = arr.map(x => x * 10)

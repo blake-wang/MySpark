@@ -42,6 +42,7 @@ public class ConfigurationUtil {
 //        String value = (String)properties.getProperty(key,"not exists");
         return value;
     }
+
     /**
      * 获取整数类型的配置项
      *

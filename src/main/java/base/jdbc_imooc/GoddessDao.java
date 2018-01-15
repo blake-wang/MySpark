@@ -53,6 +53,7 @@ public class GoddessDao {
         //执行
         ptmt.execute();
     }
+
     //更新
     public void updateGoddess() throws SQLException {
         //获取连接
@@ -64,7 +65,7 @@ public class GoddessDao {
         ptmt.setString(1, "无与伦比");
         ptmt.setInt(2, 999);
         ptmt.setInt(3, 888);
-        ptmt.setDate(4, new Date(2017,12,19));
+        ptmt.setDate(4, new Date(2017, 12, 19));
         ptmt.setString(5, "wangleimsg@gmail.com");
         ptmt.setString(6, "18588661775");
         ptmt.setString(7, "xingxing");
@@ -85,7 +86,7 @@ public class GoddessDao {
         PreparedStatement ptmt = conn.prepareStatement(sql);
         //传参
         ptmt.setInt(1, 2);
-        ptmt.setInt(2,19);
+        ptmt.setInt(2, 19);
         //执行
         ptmt.execute();
     }

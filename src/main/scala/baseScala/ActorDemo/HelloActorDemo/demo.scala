@@ -9,7 +9,7 @@ object demo {
     //启动actor
     helloActor.start()
     //向actor发送消息
-    helloActor!"leo"
+    helloActor ! "leo"
   }
 
 }

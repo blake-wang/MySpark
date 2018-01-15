@@ -9,9 +9,9 @@ import java.util.List;
  */
 public class testOOM {
     public static void main(String[] args) {
-        int i=0;
-        List<Person> list  = new ArrayList<>();
-        while(true){
+        int i = 0;
+        List<Person> list = new ArrayList<>();
+        while (true) {
             System.out.println(i++);
             list.add(new Person());
         }

@@ -10,6 +10,7 @@ object returnDemo {
       def sayHello(name: String): String = {
         return "Hello, " + name
       }
+
       sayHello("wanglei")
     }
 

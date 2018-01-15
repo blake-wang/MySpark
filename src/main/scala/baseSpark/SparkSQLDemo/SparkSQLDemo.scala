@@ -13,7 +13,7 @@ object SparkSQLDemo {
     val sparkContext = new SparkContext(sparkConf)
     val sqlContext = new SQLContext(sparkContext)
 
-//    readJson(sqlContext)
+    //    readJson(sqlContext)
 
   }
 

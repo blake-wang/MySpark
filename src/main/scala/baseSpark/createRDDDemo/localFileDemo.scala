@@ -20,7 +20,6 @@ object localFileDemo {
     println(result)
 
 
-
   }
 
 }

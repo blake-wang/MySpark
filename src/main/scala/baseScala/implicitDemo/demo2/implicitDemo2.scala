@@ -10,7 +10,7 @@ package baseScala.implicitDemo.demo2
   *
   */
 object implicitDemo2 {
-  
+
   def main(args: Array[String]): Unit = {
     val leo = new Man("leo")
     leo.emitLaser

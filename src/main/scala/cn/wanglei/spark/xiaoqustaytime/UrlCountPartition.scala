@@ -59,7 +59,6 @@ object UrlCountPartition {
 }
 
 
-
 //分区器，决定了数据到哪个分区里面   k-v类型数据才能分区
 class HostPartitioner(ins: Array[String]) extends Partitioner {
   val parMap = new mutable.HashMap[String, Int]()

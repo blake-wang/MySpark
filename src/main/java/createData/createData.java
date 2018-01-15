@@ -11,7 +11,7 @@ import java.util.Locale;
 public class createData {
     public static void main(String[] args) {
 
-        Faker faker =new Faker(Locale.CHINA);
+        Faker faker = new Faker(Locale.CHINA);
 
         Internet internet = faker.internet();
 

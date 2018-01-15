@@ -7,7 +7,7 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 
 /**
   * Created by wanglei on 2017/6/6.
- * 这种方式就是那个receiver接收的方式，偏移量是油zk来管理的。不是直连
+  * 这种方式就是那个receiver接收的方式，偏移量是油zk来管理的。不是直连
   */
 object KafkaWordCount {
   //Seq这个批次某个单词的次数

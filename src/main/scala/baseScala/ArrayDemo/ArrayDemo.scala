@@ -38,7 +38,7 @@ object ArrayDemo {
       println(i)
     }
     //打印角标
-    for (i <- 0 to arr2.length-1) {
+    for (i <- 0 to arr2.length - 1) {
       println(i)
       println(arr2(i))
     }

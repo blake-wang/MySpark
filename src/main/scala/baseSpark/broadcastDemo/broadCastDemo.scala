@@ -16,7 +16,7 @@ object broadCastDemo {
     val a = 3
     val broadcastVar = sparkContext.broadcast(a)
 
-    val rdd = sparkContext.parallelize(arr,3)
+    val rdd = sparkContext.parallelize(arr, 3)
     val result = rdd.map(index => index * broadcastVar.value)
     result.foreach(println(_))
 

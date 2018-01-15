@@ -7,7 +7,7 @@ import scala.collection.mutable.ArrayBuffer
   */
 object toArray {
   def main(args: Array[String]): Unit = {
-    val arr = ArrayBuffer(1,2,3,4,5)
+    val arr = ArrayBuffer(1, 2, 3, 4, 5)
 
     println(arr)
 

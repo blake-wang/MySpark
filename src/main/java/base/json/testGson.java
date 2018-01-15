@@ -18,8 +18,8 @@ public class testGson {
             JSONObject js = new JSONObject(json1);
             String name = js.getString("name");
             int age = js.getInt("age");
-            System.out.println("name : "+name);
-            System.out.println("age : "+age);
+            System.out.println("name : " + name);
+            System.out.println("age : " + age);
         } catch (JSONException e) {
             e.printStackTrace();
         }

@@ -32,7 +32,7 @@ public class StartDb {
             g.setAge(20 + i);
             g.setBirthday(new Date());
             g.setEmail(i + "62939327@qq.com");
-            g.setMobile(i+"5814053390");
+            g.setMobile(i + "5814053390");
             g.setCreate_user("mayun" + i);
             g.setCreate_date(new Date());
             g.setUpdate_user("huateng" + (i + 1));
@@ -68,16 +68,16 @@ public class StartDb {
     }
 
     //查询数据库  返回数据集
-    public static void querySet () throws SQLException {
+    public static void querySet() throws SQLException {
         GoddessDao dao = new GoddessDao();
         List<Goddess> result = dao.query();
-        for(Goddess g : result){
+        for (Goddess g : result) {
             System.out.println(g.toString());
         }
     }
 
     //查询数据库  返回一条数据
-    public static void queryOne () throws SQLException {
+    public static void queryOne() throws SQLException {
         GoddessDao dao = new GoddessDao();
         Goddess g = dao.get();
         System.out.println(g.toString());

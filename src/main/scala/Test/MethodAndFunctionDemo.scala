@@ -14,7 +14,7 @@ object MethodAndFunctionDemo {
   //定义一个函数f1，参数是两个Int类型，返回值是一个Int类型
   val f1 = (x: Int, y: Int) => x + y
   //再定义一个函数f2
-  val f2 = (m:Int,n:Int) => m*n
+  val f2 = (m: Int, n: Int) => m * n
 
   def main(args: Array[String]): Unit = {
     //调用m1方法，并传入f1函数

@@ -18,7 +18,7 @@ public class JdbcUtil {
     private static String user;
     private static String password;
 
-    static{
+    static {
         try {
             ClassLoader cl = JdbcUtil.class.getClassLoader();
             InputStream is = cl.getResourceAsStream("dbcfg.properties");

@@ -14,13 +14,12 @@ import java.net.Socket;
  */
 public class Server {
     public static void main(String[] args)
-            throws Exception
-    {
+            throws Exception {
         ServerSocket server = new ServerSocket(54321);
         System.out.println("服务器启动，绑定54321端口");
-        while(true){
+        while (true) {
             final Socket socket = server.accept();
-            new Thread(){
+            new Thread() {
                 @Override
                 public void run() {
                     try {

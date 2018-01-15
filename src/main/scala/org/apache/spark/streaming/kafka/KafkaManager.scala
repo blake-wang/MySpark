@@ -21,8 +21,8 @@ class KafkaManager(val kafkaParams: Map[String, String]) extends Serializable {
   /**
     * 创建数据流
     */
-  def createDirectStream[K: ClassTag, V: ClassTag, KD <: Decoder[K]: ClassTag, VD <: Decoder[V]: ClassTag](
-                                                                                                            ssc: StreamingContext, kafkaParams: Map[String, String], topics: Set[String]): InputDStream[(K, V)] =  {
+  def createDirectStream[K: ClassTag, V: ClassTag, KD <: Decoder[K] : ClassTag, VD <: Decoder[V] : ClassTag](
+                                                                                                              ssc: StreamingContext, kafkaParams: Map[String, String], topics: Set[String]): InputDStream[(K, V)] = {
     val groupId = kafkaParams.get("group.id").get
     // 在zookeeper上读取offsets前先根据实际情况更新offsets
     setOrUpdateOffsets(topics, groupId)
@@ -45,6 +45,7 @@ class KafkaManager(val kafkaParams: Map[String, String]) extends Serializable {
 
   /**
     * 创建数据流前，根据实际消费情况更新消费offsets
+    *
     * @param topics
     * @param groupId
     */
@@ -57,7 +58,8 @@ class KafkaManager(val kafkaParams: Map[String, String]) extends Serializable {
       val partitions = partitionsE.right.get
       val consumerOffsetsE = kc.getConsumerOffsets(groupId, partitions)
       if (consumerOffsetsE.isLeft) hasConsumed = false
-      if (hasConsumed) {// 消费过
+      if (hasConsumed) {
+        // 消费过
         /**
           * 如果streaming程序执行的时候出现kafka.common.OffsetOutOfRangeException，
           * 说明zk上保存的offsets已经过时了，即kafka的定时清理策略已经将包含该offsets的文件删除。
@@ -73,7 +75,7 @@ class KafkaManager(val kafkaParams: Map[String, String]) extends Serializable {
 
         // 可能只是存在部分分区consumerOffsets过时，所以只更新过时分区的consumerOffsets为earliestLeaderOffsets
         var offsets: Map[TopicAndPartition, Long] = Map()
-        consumerOffsets.foreach({ case(tp, n) =>
+        consumerOffsets.foreach({ case (tp, n) =>
           val earliestLeaderOffset = earliestLeaderOffsets(tp).offset
           if (n < earliestLeaderOffset) {
             println("consumer group:" + groupId + ",topic:" + tp.topic + ",partition:" + tp.partition +
@@ -84,8 +86,9 @@ class KafkaManager(val kafkaParams: Map[String, String]) extends Serializable {
         if (!offsets.isEmpty) {
           kc.setConsumerOffsets(groupId, offsets)
         }
-      } else {// 没有消费过
-      val reset = kafkaParams.get("auto.offset.reset").map(_.toLowerCase)
+      } else {
+        // 没有消费过
+        val reset = kafkaParams.get("auto.offset.reset").map(_.toLowerCase)
         var leaderOffsets: Map[TopicAndPartition, LeaderOffset] = null
         if (reset == Some("smallest")) {
           val leaderOffsetsE = kc.getEarliestLeaderOffsets(partitions)
@@ -108,9 +111,10 @@ class KafkaManager(val kafkaParams: Map[String, String]) extends Serializable {
 
   /**
     * 更新zookeeper上的消费offsets
+    *
     * @param rdd
     */
-  def updateZKOffsets(rdd: RDD[(String, Long)]) : Unit = {
+  def updateZKOffsets(rdd: RDD[(String, Long)]): Unit = {
     val groupId = kafkaParams.get("group.id").get
     val offsetsList = rdd.asInstanceOf[HasOffsetRanges].offsetRanges
 

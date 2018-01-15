@@ -6,6 +6,7 @@ package base.json;
 public class People {
     private String name;
     private int age;
+
     public People() {
     }
 

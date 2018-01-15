@@ -19,8 +19,8 @@ object HiveContextDemo {
     val df = sqlContext.sql("select * from student").registerTempTable("result")
     val result = sqlContext.sql("select * from result")
 
-    result.foreachPartition(rows=>{
-      for(row <- rows){
+    result.foreachPartition(rows => {
+      for (row <- rows) {
         println(row.get(0))
       }
     })

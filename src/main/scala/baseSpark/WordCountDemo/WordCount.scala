@@ -21,7 +21,7 @@ object WordCount {
     result.foreachPartition(iter => {
       iter.foreach(println(_))
     })
-//    result.repartition(1)
+    //    result.repartition(1)
     result.saveAsTextFile("F:\\Data\\OutPut6")
     sparkContext.stop()
 

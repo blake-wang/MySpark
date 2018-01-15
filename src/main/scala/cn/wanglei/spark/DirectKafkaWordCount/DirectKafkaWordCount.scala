@@ -17,7 +17,6 @@ object DirectKafkaWordCount {
     }*/
 
 
-
   def main(args: Array[String]) {
     if (args.length < 3) {
       System.err.println(

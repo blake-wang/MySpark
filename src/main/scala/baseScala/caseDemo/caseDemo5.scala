@@ -21,9 +21,9 @@ object caseDemo5 {
 
     val list1 = List("Leo")
     greeting2(list1)
-    val list2 = List("Jack","Peter","Herry")
+    val list2 = List("Jack", "Peter", "Herry")
     greeting2(list2)
-    val list3 = List("Leo","Hulala")
+    val list3 = List("Leo", "Hulala")
     greeting2(list3)
     val list4 = List("WangLei")
     greeting2(list4)

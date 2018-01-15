@@ -7,7 +7,7 @@ object demo {
   def main(args: Array[String]): Unit = {
     val userManageActor = new UserManagerActor
     userManageActor.start()
-    userManageActor!Register("leo","1234");
-    userManageActor!Login("leo","123")
+    userManageActor ! Register("leo", "1234");
+    userManageActor ! Login("leo", "123")
   }
 }

@@ -14,7 +14,7 @@ public class BigIntegerDemo {
         String s = "1000000000000000000000000";
 
         //可以通过字符串创建很大的数
-        BigInteger bi =new BigInteger(s);
+        BigInteger bi = new BigInteger(s);
         System.out.println(bi);
 
         BigInteger bi2 = new BigInteger("100");
@@ -31,7 +31,6 @@ public class BigIntegerDemo {
 
         //除
         System.out.println(bi2.divide(bi3));
-
 
 
     }

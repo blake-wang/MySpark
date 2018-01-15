@@ -18,13 +18,12 @@ import java.net.Socket;
  */
 public class Client {
     public static void main(String[] args)
-            throws IOException
-    {
-        Socket         socket = new Socket("127.0.0.1", 12345);
-        InputStream    ins    = socket.getInputStream();
-        BufferedReader br     = new BufferedReader(new InputStreamReader(ins));
-        OutputStream   ous    = socket.getOutputStream();
-        PrintStream    ps     = new PrintStream(ous);
+            throws IOException {
+        Socket socket = new Socket("127.0.0.1", 12345);
+        InputStream ins = socket.getInputStream();
+        BufferedReader br = new BufferedReader(new InputStreamReader(ins));
+        OutputStream ous = socket.getOutputStream();
+        PrintStream ps = new PrintStream(ous);
         System.out.println(br.readLine());
         ps.println("我要学会网络编程！");
         System.out.println(br.readLine());

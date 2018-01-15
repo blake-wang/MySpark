@@ -3,11 +3,11 @@ package baseScala.listDemo
 import scala.collection.mutable.ListBuffer
 
 /**
- * Created by JSJSB-0071 on 2017/7/22.
- */
+  * Created by JSJSB-0071 on 2017/7/22.
+  */
 object ListBufferDemo {
   //创建一个可变列表，初始有3个元素1，2，3
-  val list0 = ListBuffer[Int](1,2,3)
+  val list0 = ListBuffer[Int](1, 2, 3)
   //创建一个空的可变列表
   val list1 = new ListBuffer[Int]
 

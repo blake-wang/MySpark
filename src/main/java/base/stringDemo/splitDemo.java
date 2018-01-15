@@ -2,11 +2,11 @@ package base.stringDemo;
 
 /**
  * Created by bigdata on 18-1-4.
- *
+ * <p>
  * String 的 split方法有两个重载方法
  * 第一个只有一个参数
  * 第二个有两个参数
- *
+ * <p>
  * 要注意第二个参数的用法
  */
 public class splitDemo {

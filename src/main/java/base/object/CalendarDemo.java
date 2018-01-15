@@ -24,8 +24,6 @@ public class CalendarDemo {
         setTimeAndgetTime();
 
 
-
-
     }
 
     /**
@@ -35,7 +33,7 @@ public class CalendarDemo {
         Calendar c = Calendar.getInstance();
         Date d = new Date();
         c.setTime(d);
-        c.add(Calendar.DATE,-10);
+        c.add(Calendar.DATE, -10);
         Date time = c.getTime();
         System.out.println(time);
 
@@ -50,7 +48,7 @@ public class CalendarDemo {
         System.out.println("now : " + now);
 
         Date d2 = new Date();
-        System.out.println("d2 : " +d2);
+        System.out.println("d2 : " + d2);
         c2.setTime(d2);
         System.out.println(c2);
 
@@ -90,26 +88,24 @@ public class CalendarDemo {
 
     private static void baseUse() {
         Calendar c = Calendar.getInstance();    //父类引用指向子类对象
-        
+
         int year = c.get(Calendar.YEAR);
-        System.out.println("year : "+year);
+        System.out.println("year : " + year);
 
         int month = c.get(Calendar.MONTH);
-        System.out.println("month : "+month);
+        System.out.println("month : " + month);
 
         int day = c.get(Calendar.DATE);
-        System.out.println("day : "+day);
+        System.out.println("day : " + day);
 
         int hour = c.get(Calendar.HOUR);
-        System.out.println("hour : "+hour);
+        System.out.println("hour : " + hour);
 
         int minute = c.get(Calendar.MINUTE);
-        System.out.println("minute : "+minute);
+        System.out.println("minute : " + minute);
 
         int second = c.get(Calendar.SECOND);
-        System.out.println("second : "+second);
-
-
+        System.out.println("second : " + second);
 
 
         System.out.println(c.get(Calendar.YEAR));           //通过字段获取年

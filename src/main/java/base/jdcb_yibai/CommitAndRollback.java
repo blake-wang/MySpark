@@ -54,7 +54,7 @@ public class CommitAndRollback {
                 e.printStackTrace();
             }
             try {
-                if(conn!=null)
+                if (conn != null)
                     conn.close();
             } catch (SQLException e) {
                 e.printStackTrace();

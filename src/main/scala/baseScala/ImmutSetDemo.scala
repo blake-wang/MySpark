@@ -3,8 +3,8 @@ package baseScala
 import scala.collection.immutable.HashSet
 
 /**
- * Created by JSJSB-0071 on 2017/7/22.
- */
+  * Created by JSJSB-0071 on 2017/7/22.
+  */
 object ImmutSetDemo {
   //创建一个不可变的set
   val set1 = new HashSet[Int]()

@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * Created by wanglei on 2018/1/4.
  * Random类
- *
+ * <p>
  * 生成随机数
  */
 public class RandomDemo {

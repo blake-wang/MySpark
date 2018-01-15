@@ -27,13 +27,13 @@ object exceptionDemo {
       throw new IllegalArgumentException
     } catch {
       //如果不指定类型，默认匹配就是第一个
-      case _:Throwable => println("第二种 IOException")
+      case _: Throwable => println("第二种 IOException")
       case b: IllegalArgumentException => println("IllegalArgumentException")
     }
 
     //第三种写法
     try {
-      throw new IOException("user define exception")
+      throw new IOException("user define exxception-1")
     } catch {
       //指定类型后，按指定的类型匹配
       //a.printStackTrace()是将异常信息打印出来

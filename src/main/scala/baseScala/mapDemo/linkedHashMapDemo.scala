@@ -18,7 +18,7 @@ object linkedHashMapDemo {
     m1("renzhichao") = 67
     println(m1)
 
-    val m2 = new mutable.LinkedHashMap[String,Int]()
+    val m2 = new mutable.LinkedHashMap[String, Int]()
     m2("wanglei") = 78
     m2("aixu") = 26
     m2("zhaorunjun") = 30

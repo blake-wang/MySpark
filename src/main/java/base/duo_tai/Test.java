@@ -19,11 +19,11 @@ public class Test {
         c.m1();
         c.m2();
         //p本身指向的就是child，所以p可以向下强转
-        Child c2 = (Child)p;
+        Child c2 = (Child) p;
         c2.m1();
         c2.m2();
         //p2本身指向的就是parent，所以p不能向下强转
-        Child c3 = (Child)p2;
+        Child c3 = (Child) p2;
         c3.m1();
         c3.m2();
     }

@@ -53,6 +53,6 @@ public class SimpleDateFormatDemo {
         Date birthdayDate = dd.parse(birthday);
         long days = today.getTime() - birthdayDate.getTime();
         long l = days / (3600 * 24 * 1000);
-        System.out.println("我来到这个世界已经 "+l+" 天了！");
+        System.out.println("我来到这个世界已经 " + l + " 天了！");
     }
 }

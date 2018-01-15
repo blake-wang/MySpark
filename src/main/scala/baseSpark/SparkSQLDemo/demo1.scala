@@ -10,7 +10,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object demo1 {
 
   def main(args: Array[String]): Unit = {
-    val sparkConf = new SparkConf().setAppName(this.getClass.getName.replace("$","")).setMaster("local[1]")
+    val sparkConf = new SparkConf().setAppName(this.getClass.getName.replace("$", "")).setMaster("local[1]")
     val sparkContext = new SparkContext(sparkConf)
     val sqlContext = new SQLContext(sparkContext)
     val df = sqlContext.read.json("F:\\IdeaProjects\\MySpark\\src\\testData\\jsonData.txt")
@@ -18,7 +18,7 @@ object demo1 {
     df.show()
     df.printSchema()
     df.select("author").show()
-//    dataFrame.filter(dataFrame['author']!="tobe").show()
+    //    dataFrame.filter(dataFrame['author']!="tobe").show()
     df.groupBy("author").count().show()
 
     //执行SQL命令
@@ -26,12 +26,8 @@ object demo1 {
     df.sqlContext.sql("select * from test").show()
 
     //通过代码创建DataFrame
-//    val rdd = sparkContext.parallelize([])
-//    val anotherPeopleRDD = sparkContext.parallelize(Row[{"name":"Yin","address":{"city":"Columbus","state":"Ohio"}}])
-
-
-
-
+    //    val rdd = sparkContext.parallelize([])
+    //    val anotherPeopleRDD = sparkContext.parallelize(Row[{"name":"Yin","address":{"city":"Columbus","state":"Ohio"}}])
 
 
   }

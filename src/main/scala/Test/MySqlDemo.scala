@@ -3,8 +3,8 @@ package Test
 import java.sql.{PreparedStatement, DriverManager, Connection}
 
 /**
- * Created by JSJSB-0071 on 2017/7/19.
- */
+  * Created by JSJSB-0071 on 2017/7/19.
+  */
 object MySqlDemo {
   def main(args: Array[String]) {
     //获取数据

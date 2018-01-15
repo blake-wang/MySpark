@@ -13,10 +13,9 @@ import java.util.Scanner;
  */
 class Client {
     public static void main(String[] args)
-            throws IOException
-    {
+            throws IOException {
         Scanner sc = new Scanner(System.in);
-        Socket socket = new Socket("127.0.0.1",54321);
+        Socket socket = new Socket("127.0.0.1", 54321);
         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         PrintStream ps = new PrintStream(socket.getOutputStream());
         ps.println(sc.nextLine());

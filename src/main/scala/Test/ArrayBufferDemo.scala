@@ -10,12 +10,12 @@ object ArrayBufferDemo {
   def main(args: Array[String]): Unit = {
     //定长数组Array
     val nums = new Array[Int](10)
-//    val array1 = Array(1 to 10: _*)
+    //    val array1 = Array(1 to 10: _*)
     val strarray = Array("aa", "bb", "cc", "dd")
 
     println(nums.mkString(","))
 
-//    println(array1.mkString(","))
+    //    println(array1.mkString(","))
     println(strarray.mkString(","))
 
     println("================================")
@@ -36,7 +36,7 @@ object ArrayBufferDemo {
 
     var stringArrayBuffer = new ArrayBuffer[Array[Int]]()
     val array1 = Array(1, 2, 3, 4, 5)
-//    stringArrayBuffer.+=(array1)
+    //    stringArrayBuffer.+=(array1)
 
 
     println("select reg.reg_time,reg.g to_date(o.order_time)<date_add(reg.reg_time," + "2017-07-12" + ") " +

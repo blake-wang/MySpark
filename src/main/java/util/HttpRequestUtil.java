@@ -20,6 +20,7 @@ public class HttpRequestUtil {
 
         return url;
     }
+
     /**
      * 向指定URL发送GET方法的请求
      *

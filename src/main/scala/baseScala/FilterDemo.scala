@@ -1,8 +1,8 @@
 package baseScala
 
 /**
- * Created by JSJSB-0071 on 2017/7/22.
- */
+  * Created by JSJSB-0071 on 2017/7/22.
+  */
 object FilterDemo {
   val arr = Array(1, 2, 3, 4, 5, 6, 7, 8, 9)
 

@@ -1,8 +1,8 @@
 package baseScala
 
 /**
- * Created by JSJSB-0071 on 2017/7/22.
- */
+  * Created by JSJSB-0071 on 2017/7/22.
+  */
 object valAndVarDemo {
   val a = 1
   var b = 1;
@@ -21,7 +21,7 @@ object valAndVarDemo {
 
     println("----------List 改变值------------")
     //    c.+=(5)
-//    d.+=(5)
+    //    d.+=(5)
   }
 
 }

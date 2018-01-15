@@ -21,7 +21,7 @@ object JedisUtil {
         pool.returnBrokenResource(jedis)
       } catch {
         case ex: Exception => {
-          println("redis returnBrokenResource exception:" + ex);
+          println("redis returnBrokenResource exceptionDemo1:" + ex);
           jedis.close()
         }
       }
@@ -72,11 +72,13 @@ object JedisUtil {
     if (head_people == null) head_people = ""
     var os = jedis.hget(game_id.toString + "_publish_game", "system_type")
     if (os == null) {
-      println(game_id + ":getRedisValue get os is err:" + os); os = "1"
+      println(game_id + ":getRedisValue get os is err:" + os);
+      os = "1"
     }
     var groupid = jedis.hget(game_id + "_publish_game", "publish_group_id")
     if (groupid == null) {
-      println(game_id + ":getRedisValue get groupid is err:" + groupid); groupid = "0"
+      println(game_id + ":getRedisValue get groupid is err:" + groupid);
+      groupid = "0"
     }
 
     Array[String](parent_game_id, os, medium_account, promotion_channel, promotion_mode, head_people, groupid)

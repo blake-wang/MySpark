@@ -29,11 +29,11 @@ object caseDemo4 {
 
   def processException(e: Exception): Unit = {
     e match {
-      case e1: IllegalArgumentException => println("you have illegal arguments! exception is:" + e1)
-      case e2: FileNotFoundException => println("cannot find the file you need read or write!,exception is:" + e2)
-      case e3: IOException => println("you got an error while you were doing IO operation! exception is: " + e3)
-      case e4: ArithmeticException => println("exception is: " + e4)
-      case _: Exception => println("cannot know which exception you have!")
+      case e1: IllegalArgumentException => println("you have illegal arguments! exceptionDemo1 is:" + e1)
+      case e2: FileNotFoundException => println("cannot find the file you need read or write!,exceptionDemo1 is:" + e2)
+      case e3: IOException => println("you got an error while you were doing IO operation! exceptionDemo1 is: " + e3)
+      case e4: ArithmeticException => println("exceptionDemo1 is: " + e4)
+      case _: Exception => println("cannot know which exceptionDemo1 you have!")
     }
   }
 }

@@ -3,8 +3,8 @@ package baseSpark
 import org.apache.spark.{SparkContext, SparkConf}
 
 /**
- * Created by JSJSB-0071 on 2017/7/23.
- */
+  * Created by JSJSB-0071 on 2017/7/23.
+  */
 object mapPartitionsWithIndexDemo {
 
   //这个函数是查看每个分区里面有什么

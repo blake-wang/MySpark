@@ -9,7 +9,8 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 object SqlDemo {
   def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("MySqlDemo")//.setMaster("local[2]")
+    val conf = new SparkConf().setAppName("MySqlDemo")
+    //.setMaster("local[2]")
     val sc = new SparkContext(conf)
     val sqlContext = new SQLContext(sc)
 
