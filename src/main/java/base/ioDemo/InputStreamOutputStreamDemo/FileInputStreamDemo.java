@@ -1,4 +1,4 @@
-package base.ioDemo;
+package base.ioDemo.InputStreamOutputStreamDemo;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -6,6 +6,9 @@ import java.io.IOException;
 /**
  * Created by wanglei on 2018/1/15.
  * FileInputStream
+ *
+ *
+ * available()可以获取整个文件的大小
  */
 public class FileInputStreamDemo {
     public static void main(String[] args) throws IOException {
