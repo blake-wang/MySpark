@@ -34,6 +34,4 @@ public class ioDemo3 {
         }
         fis.close();
     }
-
-
 }
