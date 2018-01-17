@@ -1,5 +1,7 @@
 package baseScala.listDemo
 
+import scala.collection.mutable.ArrayBuffer
+
 /**
   * Created by wanglei on 2017/12/21.
   * 集合的高阶函数
@@ -34,6 +36,11 @@ object demo {
     val list7 = List(1, 2, 3, 4, 5)
     val list8 = list6.zip(list7)
     println(list8)
+
+
+    val list10 = ArrayBuffer(10, 11, 12, 13, 14, 15, 16)
+    val res = list10.contains(19)
+    println("res : " + res)
 
   }
 }

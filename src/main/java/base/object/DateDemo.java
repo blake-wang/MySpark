@@ -1,5 +1,7 @@
 package base.object;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -28,6 +30,10 @@ public class DateDemo {
         Date d2 = new Date(0);  //如果构造方法中传入0，代表的是1970年1月1日
         System.out.println(d2);
 
+        //通过传入时间戳构建Date对象，默认接受的是以毫秒为单位的
+        Date d3 = new Date(1514185005000L);
+        System.out.println(d3);
+
 
         //getTime()     获取当前时间的毫秒值
         long time = d1.getTime();
@@ -38,9 +44,25 @@ public class DateDemo {
         System.out.println(d1);
 
 
-        //通过传入时间戳构建Date对象，默认接受的是以毫秒为单位的
-        Date d3 = new Date(1514185005000L);
-        System.out.println(d3);
+
+        //判断一个时间是否在另一个时间之前
+        String time1 = "2018-01-10 09";
+        String time2 = "2018-01-10 12";
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH");
+
+        try {
+            Date date1 = sdf.parse(time1);
+            Date date2 = sdf.parse(time2);
+            boolean before = date1.before(date2);
+            boolean after = date1.after(date2);
+
+            System.out.println("before " +before);
+            System.out.println("after " +after);
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
 
     }

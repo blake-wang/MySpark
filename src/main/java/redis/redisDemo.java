@@ -110,6 +110,7 @@ public class redisDemo {
         jedis11.hset("zhongguo", "shanxi", "xian");
         jedis11.hset("zhongguo", "henan", "zhengzhou");
         jedis11.hset("zhongguo", "jiangsu", "nanjing");
+        jedis11.hset("zhongguo", "beijing", "");
 
         Map<String, String> zhongguo = jedis11.hgetAll("zhongguo");
 
@@ -154,6 +155,13 @@ public class redisDemo {
         for (Map.Entry<String, String> entry : zhongguo.entrySet()) {
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
+
+        System.out.println("------------------------------");
+
+        String str = jedis11.hget("zhongguo", "beijing");
+
+        System.out.println("str : |"+str+"|");
+
     }
 
     /**
