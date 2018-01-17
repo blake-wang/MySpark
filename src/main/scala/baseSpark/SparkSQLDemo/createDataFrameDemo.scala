@@ -1,5 +1,7 @@
 package baseSpark.SparkSQLDemo
 
+import java.util.Properties
+
 import Utils.StringUtils
 import org.apache.spark.sql.hive.HiveContext
 import org.apache.spark.sql.types.{IntegerType, StringType, StructType}
@@ -30,21 +32,45 @@ object createDataFrameDemo {
     //创建dataFrame
 
     //1:通过读取json文件
-    val df: DataFrame = json(sqlContext)
-
-    //dataFrame的write默认保存的是parquet格式
-    df.write.mode(SaveMode.Overwrite).save(hdfsParquetFileDir)
-
-    //2：通过读取parquet文件
+//    val df: DataFrame = json(sqlContext)
+//
+//    //dataFrame的write默认保存的是parquet格式
+//    df.write.mode(SaveMode.Overwrite).save(hdfsParquetFileDir)
+//
+//    //2：通过读取parquet文件
     parquet(hdfsParquetFileDir, sqlContext)
+//
+//    //3：通过hiveSQL语句查询
+//    hiveSql(sc)
+//
+//    //4：通过rdd创建 ->RDD装的是row才行
+//    rdd(sc, sqlContext)
 
-    //3：通过sql语句查询
-    sql(sc)
-
-    //4：通过rdd创建
-    rdd(sc, sqlContext)
+    //5：通过MySql语句查询  注意： 该方法读取的是整张表，所以只能用于读取小表，表的数据数据过大会导致内存溢出
+//    mySql(sc)
 
 
+
+
+
+    sc.stop()
+  }
+
+  private def mySql(sc: SparkContext) = {
+    //注意： 该方法读取的是整张表，所以只能用于读取小表，表的数据数据过大会导致内存溢出
+    val url = "jdbc:mysql://192.168.20.60:3306/xiaopeng2_faxing?user=xiaopeng&password=xiaopeng99&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull"
+    val tableName = "ranking"
+    val jdbc_xiaopeng2fx_user = "xiaopeng"
+    val jdbc_xiaopeng2fx_pwd = "xiaopeng99"
+    val jdbc_driver = "com.mysql.jdbc.Driver"
+    val properties = new Properties();
+    properties.put("driver", jdbc_driver)
+    properties.put("user", jdbc_xiaopeng2fx_user)
+    properties.put("password", jdbc_xiaopeng2fx_pwd)
+    val hiveContext = new HiveContext(sc)
+    val jdbcDF = hiveContext.read.jdbc(url, tableName, properties)
+    jdbcDF.registerTempTable(tableName)
+    jdbcDF.show()
   }
 
   private def rdd(sc: SparkContext, sqlContext: SQLContext) = {
@@ -80,11 +106,16 @@ object createDataFrameDemo {
 
   private def parquet(hdfsParquetFileDir: String, sqlContext: SQLContext) = {
     //读取parquet文件的方式生成dataFrame
-    val df2 = sqlContext.read.parquet(hdfsParquetFileDir)
-    df2.show()
+//    val df2 = sqlContext.read.parquet(hdfsParquetFileDir)
+//    df2.show()
+
+    val df3 = sqlContext.read.parquet("file:///home/bigdata/data/par*")
+    df3.show()
+
+
   }
 
-  private def sql(sc: SparkContext) = {
+  private def hiveSql(sc: SparkContext) = {
     //通过sql的方式创建dataFrame
     val hiveContext = new HiveContext(sc)
     val df3 = hiveContext.sql("select * from yyft.ods_active limit 10")
