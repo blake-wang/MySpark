@@ -21,7 +21,7 @@ public class demo4 {
         BufferedReader br = new BufferedReader(new FileReader("F:\\IdeaProjects\\MySpark\\src\\testData\\nextjson.json"));
         BufferedWriter bw = new BufferedWriter(new FileWriter("F:\\IdeaProjects\\MySpark\\src\\testData\\copy3.json"));
         String line;
-        while ((line = br.readLine()) != null) {
+        while ((line = br.readLine()) != null) {    //如果一行一行的读， null 是结束标识符
             bw.write(line);
             bw.newLine();   //写出回车换行符，每写一行要记得换行
         }

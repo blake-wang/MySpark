@@ -15,7 +15,7 @@ public class demo3 {
         BufferedReader br = new BufferedReader(new FileReader("F:\\IdeaProjects\\MySpark\\src\\testData\\nextjson.json"));
         BufferedWriter bw = new BufferedWriter(new FileWriter("F:\\IdeaProjects\\MySpark\\src\\testData\\copy2.json"));
         int c;
-        while ((c = br.read()) != -1) {
+        while ((c = br.read()) != -1) { //如果一个字符一个字符的读，-1是结束标识符
             bw.write(c);
         }
         br.close();
