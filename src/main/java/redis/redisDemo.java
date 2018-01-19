@@ -160,7 +160,7 @@ public class redisDemo {
 
         String str = jedis11.hget("zhongguo", "beijing");
 
-        System.out.println("str : |"+str+"|");
+        System.out.println("str : |" + str + "|");
 
     }
 
