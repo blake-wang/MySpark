@@ -1,4 +1,4 @@
-package baseSpark.createRDDDemo
+package baseSpark.create_RDD_Demo
 
 import org.apache.hadoop.io.{LongWritable, Text}
 import org.apache.hadoop.mapreduce.lib.input.CombineTextInputFormat

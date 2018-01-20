@@ -1,4 +1,4 @@
-package baseSpark.cacheRDDDemo
+package baseSpark.cache_RDD_Demo
 
 import org.apache.spark.storage.StorageLevel
 import org.apache.spark.{SparkConf, SparkContext}

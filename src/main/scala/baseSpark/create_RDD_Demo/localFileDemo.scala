@@ -1,24 +1,25 @@
-package baseSpark.createRDDDemo
+package baseSpark.create_RDD_Demo
 
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
   * Created by wanglei on 2017/12/30.
-  * 通过集合并行化创建RDD
+  * 通过本地文件创建RDD
   *
-  *
+  * 统计文本文件内的字数
   */
-object listDemo {
+object localFileDemo {
   def main(args: Array[String]): Unit = {
     val sparkConf = new SparkConf()
       .setAppName(this.getClass.getName.replace("$", ""))
       .setMaster("local[1]")
     val sparkContext = new SparkContext(sparkConf)
-    val arr = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    val parallelizeRDD = sparkContext.parallelize(arr)
-    val result = parallelizeRDD.reduce(_ + _)
-    parallelizeRDD.foreach(println(_))
+    val lines = sparkContext.textFile("F:\\testData.txt")
+    val lineLength = lines.map(line => line.length)
+    val result = lineLength.reduce(_ + _)
     println(result)
 
+
   }
+
 }

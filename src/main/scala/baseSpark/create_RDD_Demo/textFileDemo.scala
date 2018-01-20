@@ -1,4 +1,4 @@
-package baseSpark.createRDDDemo
+package baseSpark.create_RDD_Demo
 
 import org.apache.spark.{SparkConf, SparkContext}
 
