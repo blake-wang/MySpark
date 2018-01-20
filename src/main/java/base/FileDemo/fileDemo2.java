@@ -16,7 +16,7 @@ public class fileDemo2 {
 
 
 //        demo1();//创建文件
-//        demo2();//创建文件夹
+//        MyThreadDemo();//创建文件夹
 
         File file= new File("F:\\IdeaProjects\\MySpark\\src\\testData\\fileDemo2\\fileDemo3");
         boolean mkdir = file.mkdirs();//创建多级文件夹，如果父文件夹不存在，同时创建父文件夹
