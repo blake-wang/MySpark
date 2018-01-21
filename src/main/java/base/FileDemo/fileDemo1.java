@@ -20,7 +20,7 @@ public class fileDemo1 {
     public static void main(String[] args) {
 //        demo1();
 //        MyThreadDemo();
-//        demo3();
+//        demo3_currentThread();
 
 
     }
