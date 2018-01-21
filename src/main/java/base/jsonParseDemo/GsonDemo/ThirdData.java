@@ -1,4 +1,4 @@
-package base.json;
+package base.jsonParseDemo.GsonDemo;
 
 /**
  * Created by bigdata on 18-1-20.

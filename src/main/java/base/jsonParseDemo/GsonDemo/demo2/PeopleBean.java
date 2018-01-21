@@ -1,16 +1,16 @@
-package base.json;
+package base.jsonParseDemo.GsonDemo.demo2;
 
 /**
  * Created by bigdata on 17-11-22.
  */
-public class People {
+public class PeopleBean {
     private String name;
     private int age;
 
-    public People() {
+    public PeopleBean() {
     }
 
-    public People(String name, int age) {
+    public PeopleBean(String name, int age) {
         this.name = name;
         this.age = age;
     }

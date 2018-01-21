@@ -1,4 +1,4 @@
-package base.json;
+package base.jsonParseDemo.GsonDemo;
 
 import java.util.List;
 

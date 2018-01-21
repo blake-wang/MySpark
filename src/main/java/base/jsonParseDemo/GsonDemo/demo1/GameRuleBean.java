@@ -1,9 +1,9 @@
-package base.json;
+package base.jsonParseDemo.GsonDemo.demo1;
 
 /**
  * Created by bigdata on 17-11-22.
  */
-public class GameRule {
+public class GameRuleBean {
 
     /**
      * content : {"operatime":"2017-07-19 17:20:01","rolechgype":"1","roleid":"12923556610888","rolelevel":null,"rolename":"郦凝","roletype":"神剑","status":"1"}
