@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by bigdata on 18-1-20.
  */
-public class UnKnow {
+public class UnKnowBean {
 
     /**
      * addresses : [{"format":"us","type":"work","value":"1234 Main StnSpringfield, TX 78080-1216"},{"format":"us","type":"home","value":"5678 Main StnSpringfield, TX 78080-1316"}]

@@ -3,7 +3,7 @@ package base.jsonParseDemo.GsonDemo;
 /**
  * Created by bigdata on 18-1-20.
  */
-public class ThirdData {
+public class ThirdDataBean {
 
     /**
      * adv_id : -1
