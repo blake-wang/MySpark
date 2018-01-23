@@ -2,6 +2,7 @@ package baseSpark.SparkSQLDemo
 
 import java.io.{BufferedWriter, FileWriter}
 
+import org.apache.spark.sql.DataFrame
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.hive.HiveContext
 
@@ -42,7 +43,28 @@ object saveFileDemo {
     //这种方式生成的是一个文件夹，里面存的是parquet文件
     //df2.write.save("file:///home/bigdata/IdeaProjects/MySpark/src/testData/DataFrameData/demo1")
 
+    //在每个分区创建对象的写法写入到本地文件
+    //    demo1(df2)
 
+    //用共享变量的方式，将对象发送到每个partition -->想想倒是可以，其实这样是不行的
+    val br = new BufferedWriter(new FileWriter("src/testData/udfResultVar.txt"))
+    val brVar = sparkContext.broadcast(br)
+
+    df2.foreachPartition(iter => {
+      val br = brVar.value
+      iter.foreach(line => {
+        br.write(line.toString())
+        br.newLine()
+      })
+      br.flush()
+    })
+    br.close()
+
+
+  }
+
+
+  private def demo1(df2: DataFrame) = {
     //如果要将数据以字符流的方式写入到本地文件,有几点要注意一下
     //1：只能在local模式下才能写
     //2：在每一个partition里面创建 BufferedWriter，或者是在每一行写入时都创建
@@ -58,8 +80,5 @@ object saveFileDemo {
       br.flush()
       br.close()
     })
-
   }
-
-
 }

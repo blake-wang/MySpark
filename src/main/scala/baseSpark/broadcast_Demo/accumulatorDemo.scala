@@ -1,4 +1,4 @@
-package baseSpark.broadcastDemo
+package baseSpark.broadcast_Demo
 
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -6,6 +6,9 @@ import org.apache.spark.{SparkConf, SparkContext}
   * Created by wanglei on 2018/1/1.
   * Accumulator
   * 累加变量
+  *
+  * 基本用法
+  * sparkContext.accumulator()
   */
 object accumulatorDemo {
   def main(args: Array[String]): Unit = {

@@ -1,10 +1,14 @@
-package baseSpark.broadcastDemo
+package baseSpark.broadcast_Demo
 
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
   * broadCast
   * 广播变量
+  *
+  * 基本的用法
+  * sparkContext.broadcast()
+  * sparkContext.value
   *
   */
 object broadCastDemo {
