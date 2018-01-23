@@ -1,4 +1,4 @@
-package base.SheJiMoShi;
+package base.设计模式;
 
 /**
  * Created by wanglei on 2018/1/17.
