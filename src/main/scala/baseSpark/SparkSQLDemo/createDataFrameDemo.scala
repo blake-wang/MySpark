@@ -14,8 +14,12 @@ import org.apache.spark.{SparkConf, SparkContext}
   * DataFrame
   *
   * 其中的每一行都是 Row
-  *
-  *
+  * 创建DataFrame的几种方式：
+  * 1、通过 RDD[Row()] 来创建
+  * 2、通过读取 json 来创建
+  * 3、通过读取 parquet 文件来创建
+  * 4、通过查询 hive 表来创建
+  * 5、通过查询 mysql 表来创建
   */
 object createDataFrameDemo {
   def main(args: Array[String]): Unit = {
@@ -38,7 +42,7 @@ object createDataFrameDemo {
 //    df.write.mode(SaveMode.Overwrite).save(hdfsParquetFileDir)
 //
 //    //2：通过读取parquet文件
-    parquet(hdfsParquetFileDir, sqlContext)
+//    parquet(hdfsParquetFileDir, sqlContext)
 //
 //    //3：通过hiveSQL语句查询
 //    hiveSql(sc)
@@ -47,7 +51,7 @@ object createDataFrameDemo {
 //    rdd(sc, sqlContext)
 
     //5：通过MySql语句查询  注意： 该方法读取的是整张表，所以只能用于读取小表，表的数据数据过大会导致内存溢出
-//    mySql(sc)
+    mySql(sc)
 
 
 
@@ -69,7 +73,7 @@ object createDataFrameDemo {
     properties.put("password", jdbc_xiaopeng2fx_pwd)
     val hiveContext = new HiveContext(sc)
     val jdbcDF = hiveContext.read.jdbc(url, tableName, properties)
-    jdbcDF.registerTempTable(tableName)
+    jdbcDF.registerTempTable("mysql_table")
     jdbcDF.show()
   }
 

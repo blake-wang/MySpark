@@ -1,4 +1,4 @@
-package base.ioDemo.ReaderWriterDemo;
+package base.IO流.ReaderWriterDemo;
 
 import java.io.FileWriter;
 import java.io.IOException;

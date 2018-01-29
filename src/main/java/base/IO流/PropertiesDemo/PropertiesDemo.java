@@ -1,4 +1,4 @@
-package base.ioDemo.PropertiesDemo;
+package base.IO流.PropertiesDemo;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
