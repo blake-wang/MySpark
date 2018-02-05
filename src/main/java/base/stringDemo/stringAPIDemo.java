@@ -78,9 +78,19 @@ public class stringAPIDemo {
 //        compareTo();
 
         //compareToIgnoreCase   按照码表比较字符串的大小，忽略大小写
-        compareToIgnoreCase();
+//        compareToIgnoreCase();
+
+        testHashCode();
 
 
+    }
+
+    private static void testHashCode() {
+        //不同字符串的hashCode不同
+        String s8 = "wanglei";
+        String s9 = "aixu";
+        System.out.println(s8.hashCode());
+        System.out.println(s9.hashCode());
     }
 
     private static void compareToIgnoreCase() {
