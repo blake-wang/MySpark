@@ -12,16 +12,45 @@ public class Demo09_HashMap {
 //        demo2();
 //        demo3();
 //        demo4();
+//          demo5();
 
+        Map<String, Integer> map = new HashMap<>();
+        map.put(null,null);
+        System.out.println(map);
+
+        map.put("张三",23);
+        map.put("李四",null);
+
+        System.out.println(map.get("李四"));
+        //如果键不存在，返回的是null
+        System.out.println(map.get("王五"));
+
+
+    }
+
+    private static void demo5() {
         Map<String, Integer> map = new HashMap<>();
         map.put("张三", 23);
         map.put("李四", 24);
         map.put("王五", 25);
         map.put("赵六", 26);
+        //Map.Entry说明Entry是Map的内部接口，将键和值封装成了Entry对象，并存储在Set集合中
         Set<Map.Entry<String, Integer>> entries = map.entrySet();
-        
+        Iterator<Map.Entry<String, Integer>> iterator = entries.iterator();
+        while (iterator.hasNext()) {
+            //获取每一个Entry对象
+            Map.Entry<String, Integer> next = iterator.next();
+            String key = next.getKey(); //根据键值对对象获取键
+            Integer value = next.getValue();    //根据键值对对象获取值
+            System.out.println(key + " *** " + value);
+        }
 
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            System.out.println(key +" %%% "+value);
 
+        }
     }
 
     private static void demo4() {
