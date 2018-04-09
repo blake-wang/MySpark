@@ -1,4 +1,4 @@
-package base.jsonParseDemo.GsonDemo;
+package base.JsonParseDemo.GsonDemo;
 
 /**
  * Created by wanglei on 2018/1/21.

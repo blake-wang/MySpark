@@ -1,4 +1,4 @@
-package base.jsonParseDemo.GsonDemo.demo1;
+package base.JsonParseDemo.GsonDemo.demo1;
 
 import com.google.gson.Gson;
 

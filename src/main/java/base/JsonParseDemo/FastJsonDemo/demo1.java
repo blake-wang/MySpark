@@ -1,4 +1,4 @@
-package base.jsonParseDemo.FastJsonDemo;
+package base.JsonParseDemo.FastJsonDemo;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
