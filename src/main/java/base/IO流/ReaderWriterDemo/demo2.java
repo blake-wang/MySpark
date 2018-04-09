@@ -6,6 +6,7 @@ import java.io.IOException;
 
 /**
  * Created by wanglei on 2018/1/17.
+ * 文件拷贝
  * 定义缓冲字符数组
  */
 public class demo2 {

@@ -7,8 +7,7 @@ import java.io.IOException;
 /**
  * Created by wanglei on 2018/1/17.
  * 文件拷贝
- * <p>
- * 一个字符等于2个字节
+ * 一个字符一个字符拷贝，一个字符等于2个字节
  * 字符流不能用于拷贝文件
  */
 public class demo1 {
