@@ -70,7 +70,7 @@ object FileUtil {
   }
 
   /**
-    * 用于测试的一个方法
+    * 存储DataFrame时用
     *
     * @param df
     * @param fileName
