@@ -1,14 +1,13 @@
 package redis.map;
 
 import com.google.gson.Gson;
+import redis.clients.jedis.Jedis;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
-import redis.clients.jedis.Jedis;
 
 /**
  * Created by wanglei on 2017/5/18.
