@@ -1,22 +1,21 @@
-package baseSpark.transformationAndaction.actionDemo
+package baseSpark.transformationAndaction
 
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
   * Created by wanglei on 2017/12/31.
-  * reduce
+  * map
   *
-  * 聚合：将多个元素聚合成一个元素
+  * 案例：将集合中每一个元素都乘以2
   */
-object reduceDemo {
+object mapDemo {
   def main(args: Array[String]): Unit = {
     val sparkConf = new SparkConf().setAppName(this.getClass.getName.replace("$", "")).setMaster("local[1]")
     val sparkContext = new SparkContext(sparkConf)
-    val arr = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    val rdd = sparkContext.parallelize(arr)
-    val result = rdd.reduce(_ + _)
-    println(result)
-
+    val arr = Array(1, 2, 3, 4, 5)
+    val arrRDD = sparkContext.parallelize(arr)
+    //map也会生成新的RDD
+    val result = arrRDD.map(_ * 2)
+    result.foreach(println(_))
   }
-
 }

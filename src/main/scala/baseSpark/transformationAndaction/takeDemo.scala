@@ -1,4 +1,4 @@
-package baseSpark.transformationAndaction.actionDemo
+package baseSpark.transformationAndaction
 
 import org.apache.spark.{SparkConf, SparkContext}
 

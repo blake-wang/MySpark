@@ -1,4 +1,4 @@
-package baseSpark.transformationAndaction.actionDemo
+package baseSpark.transformationAndaction
 
 /**
   * Created by wanglei on 2017/12/31.
