@@ -21,6 +21,7 @@ object RDDUtils {
     var count = 0L
     while (iterator.hasNext) {
       count += 1L
+      //iteror这里，如果要循环遍历，要继续next一次
       iterator.next()
     }
     count

@@ -18,11 +18,9 @@ object groupByKeyDemo {
     val tupleRDD = sparkContext.parallelize(arr)
     //groupByKey直接使用,不用传入参数
     val result = tupleRDD.groupByKey
-    result.foreach(tuple2 => {
+    result.foreach(f = tuple2 => {
       println(tuple2._1)
-      //      tuple2._2.foreach(println(_))
-      tuple2._2.
-
+      tuple2._2.foreach(println(_))
     })
   }
 
