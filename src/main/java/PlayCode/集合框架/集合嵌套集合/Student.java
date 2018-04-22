@@ -1,4 +1,4 @@
-package PlayCode.集合框架.集合嵌套集合;package ����Ƕ�׼���;
+package PlayCode.集合框架.集合嵌套集合;
 
 public class Student {
 	private String name;

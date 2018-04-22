@@ -1,4 +1,4 @@
-package PlayCode.集合框架.集合框架;package ���Ͽ��;
+package PlayCode.集合框架.集合框架;
 
 import java.util.ArrayList;
 import java.util.Iterator;
