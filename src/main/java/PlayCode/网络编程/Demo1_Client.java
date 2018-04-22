@@ -1,4 +1,4 @@
-package PlayCode.网络编程;package ������;
+package PlayCode.网络编程;
 
 import java.io.IOException;
 import java.io.InputStream;
