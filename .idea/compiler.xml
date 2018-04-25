@@ -9,10 +9,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MySpark" />
+        <module name="hellospark" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hellospark" target="1.7" />
       <module name="MySpark" target="1.7" />
     </bytecodeTargetLevel>
   </component>
