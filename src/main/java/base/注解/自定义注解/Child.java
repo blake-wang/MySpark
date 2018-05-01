@@ -1,9 +1,8 @@
 package base.注解.自定义注解;
 
-import base.注解.JDK自带注解.Person;
 
 @Description("I am Child class annotation")
-public class Child implements Person {
+public class Child extends Person {
 
 
     @Override

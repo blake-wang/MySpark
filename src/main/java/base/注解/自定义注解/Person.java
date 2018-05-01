@@ -1,13 +1,20 @@
 package base.注解.自定义注解;
 
 @Description("I am interface")
-public interface Person {
+public class Person {
 
     @Description("I am interface method")
-    public String name();
+    public String name() {
+        return null;
+    }
 
-    public int age();
+    public int age() {
+        return 0;
+    }
+
 
     @Deprecated
-    public void sing();
+    public void sing() {
+
+    }
 }
