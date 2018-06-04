@@ -13,7 +13,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="hellospark" target="1.7" />
+      <module name="hellospark" target="8" />
       <module name="MySpark" target="1.7" />
     </bytecodeTargetLevel>
   </component>

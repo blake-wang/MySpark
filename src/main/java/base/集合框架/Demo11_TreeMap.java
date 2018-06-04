@@ -14,6 +14,7 @@ public class Demo11_TreeMap {
         tm.put("王五", 25);
         tm.put("赵六", 29);
         tm.put("周七", 33);
+        tm.put("周七",99);//对相同的key存入值，会覆盖之前的
 
         System.out.println(tm);
     }
