@@ -1,16 +1,14 @@
 package base.JsonParseDemo.JacksonDemo;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class JacksonTest {
-    public static void main(String args[]) {
+    public static void main(String args[])  {
 //        JacksonTest tester = new JacksonTest();
         try {
             ObjectMapper mapper = new ObjectMapper();
@@ -30,7 +28,7 @@ public class JacksonTest {
             // Array
             studentDataMap.put("marks", marks);
 
-            mapper.writeValue(new File("E:\\IdeaProjects\\MySpark\\src\\testData\\student.json"), studentDataMap);
+            mapper.writeValue(new File(".\\src\\testData\\student.json"), studentDataMap);
             //result student.json
             //{
             //   "student":{"name":"Mahesh","age":10},
@@ -38,17 +36,13 @@ public class JacksonTest {
             //   "verified":false,
             //   "name":"Mahesh Kumar"
             //}
-            studentDataMap = mapper.readValue(new File("E:\\IdeaProjects\\MySpark\\src\\testData\\student.json"), Map.class);
+            studentDataMap = mapper.readValue(new File(".\\src\\testData\\student.json"), Map.class);
 
             System.out.println(studentDataMap.get("student"));
             System.out.println(studentDataMap.get("name"));
             System.out.println(studentDataMap.get("verified"));
             System.out.println(studentDataMap.get("marks"));
-        } catch (JsonParseException e) {
-            e.printStackTrace();
-        } catch (JsonMappingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
