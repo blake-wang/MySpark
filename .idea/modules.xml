@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hellospark.iml" filepath="$PROJECT_DIR$/hellospark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-demo/javademo.iml" filepath="$PROJECT_DIR$/java-demo/javademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scala-demo/scalademo.iml" filepath="$PROJECT_DIR$/scala-demo/scalademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spark-demo/sparkdemo.iml" filepath="$PROJECT_DIR$/spark-demo/sparkdemo.iml" />
     </modules>
   </component>
 </project>

@@ -2,19 +2,24 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <excludeFromCompile>
-      <file url="file://$PROJECT_DIR$/src/main/scala/baseScala/funcDemo/Demo1.scala" />
+      <file url="file://$PROJECT_DIR$/scala-demo/src/main/scala/baseScala/funcDemo/Demo1.scala" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hellospark" />
+        <module name="javademo" />
+        <module name="scalademo" />
+        <module name="sparkdemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hellospark" target="8" />
+      <module name="javademo" target="8" />
       <module name="MySpark" target="1.7" />
+      <module name="scalademo" target="8" />
+      <module name="sparkdemo" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
