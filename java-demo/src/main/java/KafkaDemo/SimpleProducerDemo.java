@@ -6,6 +6,9 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
 
+/**
+ * 简单生产者
+ */
 public class SimpleProducerDemo {
     public static void main(String[] args) {
         Properties props = new Properties();
